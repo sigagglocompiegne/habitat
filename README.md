@@ -3,6 +3,8 @@
 # Habitat
 
 Ensemble des éléments constituant la mise en oeuvre de la base de données sur l'habitat ainsi que l'exploitation des données dans l'application dédiée :
+
+- Script d'initialisation de la base de données
   * [Suivi des modifications](sql/habitat_00_trace.sql)
   * [Création  de la structure initiale](sql/habitat_10_squelette.sql)
   * [Création des vues de gestion](sql/habitat_20_vues_gestion.sql)
