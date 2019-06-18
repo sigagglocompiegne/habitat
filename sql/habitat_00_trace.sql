@@ -16,6 +16,6 @@
 
 /*
 #################################################################### SUIVI CODE SQL ####################################################################
-2018-12-28 : GB / initialisation du code
+2019-07-01 : GB / initialisation du code uniquement pour la partie gestion Habitat indigne
 
 
