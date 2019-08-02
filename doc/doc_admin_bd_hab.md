@@ -5,7 +5,7 @@
 ## Principes
   * **généralité** :
 
-La base de données développée ici a été conçue pour répondre à une logique de suivi des signalements d'habitat indigne (péril, insalubrité,...). Elle permet au service en charge de cette démarche de mieux suivre les dossiers et d'être plus réactif. 
+La base de données développée ici a été conçue pour répondre à une logique de suivi des signalements d'habitat indigne (péril, insalubrité,...). Elle permet au service en charge de cette démarche de mieux suivre les dossiers et d'être plus réactif. De plus, les signalements reposent sur une localisation à l'adresse issue de la Base Adresse Locale de l'Agglomération de la Région de Compiègne. 
  
  * **résumé fonctionnel** :
 
@@ -32,3 +32,14 @@ La clôture d'un dossier empêche celui-ci d'être à nouveau ouvert et modifié
 ## Schéma fonctionnel
 
 ![schema_fonctionnel](img/schema_fonctionnel_habindigne_v1.png)
+
+## Dépendances
+
+La base de données Habitat Indigne s'appuie sur des référentiels préexistants constituant autant de dépendances nécessaires pour l'implémentation de la base de données.
+
+|schéma | table | description | usage |
+|:---|:---|:---|:---|   
+|r_voie|lt_type_voie|domaine de valeur générique d'une table géographique|type de voie d'un propriétaire|
+|x_apps|xapps_geo_vmr_adresse|donnée de référence des adresses |récupération de la géométrie du point d'adresse et de l'adressage|
+
+---
