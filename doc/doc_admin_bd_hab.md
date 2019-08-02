@@ -378,4 +378,4 @@ Sans objet
 
 ## Modèle conceptuel simplifié
 
-![mcd](img/mcd.jpg)
+![mcd](img/mcd_habindigne_v1.png)
