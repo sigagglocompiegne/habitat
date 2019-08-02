@@ -58,7 +58,44 @@ Sans objet. La géométrie utilisée est celle des points d'adresse. Cette class
 
 |Nom attribut | Définition | Type  | Valeurs par défaut |
 |:---|:---|:---|:---|  
-|id_dos|Identifiant unique du PEI|bigint| |
+|id_dos|Identifiant unique interne ARC du signalement|integer|nextval('m_habitat.an_hab_indigne_sign_seq'::regclass)|
+|id_adresse|Identifiant de l'adresse|integer| |
+|nm_doc|Référence du dossier ARC|character varying(254)| |
+|n_dos|Numéro de dossier de l'organisme extérieur ayant fait le signalement|character varying(254)| |
+|compt_ad|Complément d'adresse|character varying(254)| |
+|o_signal|Provenance du signalement|character varying(254)| |
+|d_signal|Date du signalement|timestamp without time zone| |
+|q_init|Qualification initiale du signalement (liste de valeur dans lt_hab_indigne_qualif)|character varying(2)| |
+|q_det|Détail de la qualification initiale|character varying(254)| |
+|d_visit_d|Date de demande d'une visite|timestamp without time zone| |
+|d_visit_e|Date de la visite|timestamp without time zone| |
+|o_visit|Opérateur de la visite|character varying(100)| |
+|m_nvisit|Motif de la non visite|character varying(254)| |
+|d_rvisit|Date du rapport de la visite|timestamp without time zone| |
+|q_final|Qualification finale du signalement (lien vers lt_hab_indigne_qualif)|character varying(2)| |
+|r_rvisit|Résumé du rapport de visite|character varying(1000)| |
+|action|Action(s) à entreprendre|character varying(1000)| |
+|av_dos|Avancement du dossier|character varying(254)| |
+|d_pvmed|Date du procès-verbal de mise en demeure|timestamp without time zone| |
+|d_pdelais|Date du prochain délai|timestamp without time zone| |
+|d_visitconf|Date de la visite de conformité|timestamp without time zone| |
+|cloture|Dossier clos|boolean|false|
+|m_avise|Information donnée au maire|boolean|false|
+|nblog|Nombre de logements|character varying(20)| |
+|occupation|Le logement ou l'immeuble concerné est-il occupé ?|boolean|true|
+|dos_anah|Dossier ANAH|boolean|false|
+|observ|Observations|character varying(2500)| |
+|op_sai|Opérateur de saisie de l'information|character varying(80)| |
+|date_sai|Date de saisie de l'information|timestamp without time zone| |
+|date_maj|Date de mise à jour de l'information|timestamp without time zone| |
+|e_dos|Etat d'avancement du dossier (liste de valeur dans lt_hab_indigne_avancdos)|character varying(2)|10|
+|ep_dos|Prochaine étape d'avancement du dossier (liste de valeur dans lt_hab_indigne_avancdos)|character varying(2)|20|
+|secpar|Section cadastrale de la propriété|character varying(2)| |
+|numpar|Numéro de la parcelle de la propriété|integer| |
+|d_ftrav|Date de fin de travaux (information du propriétaire)|timestamp without time zone| |
+|idu|Clé de référence parcellaire déduie des attributs secpar et numpar saisie par l'utilisateur et regénéré via la trigger. Cette clé permet de faire le lien dans GEO avec latable Parcelle (Alpha) V3 pour accéder à la fiche parcelle depuis la fiche de sig (...)|
+
+
 
 
 * 5 triggers :
