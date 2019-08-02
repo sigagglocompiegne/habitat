@@ -775,10 +775,17 @@ CREATE TRIGGER t_t1_an_hab_indigne_sign_date_sai
 
 CREATE OR REPLACE FUNCTION m_habitat.ft_m_occprop_delete()
   RETURNS trigger AS
-$BODY$BEGIN
+$BODY$
 
-DELETE FROM m_habitat.an_hab_indigne_occ WHERE id_dos = old.id_dos AND old.cloture = false;
-DELETE FROM m_habitat.an_hab_indigne_prop WHERE id_dos = old.id_dos AND old.cloture = false;
+DECLARE v_clos boolean;
+
+BEGIN
+
+v_clos := old.cloture;
+
+DELETE FROM m_habitat.an_hab_indigne_occ WHERE id_dos = old.id_dos AND v_clos = false;
+DELETE FROM m_habitat.an_hab_indigne_prop WHERE id_dos = old.id_dos AND v_clos = false;
+DELETE FROM m_habitat.an_hab_indigne_media WHERE id = old.id_dos AND v_clos = false;
 
 return new;
 END$BODY$
