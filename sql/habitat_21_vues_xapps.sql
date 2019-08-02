@@ -1,3 +1,10 @@
+/*Habitat/
+/*Vue applicative */
+/* habitat_10_squelette.sql */
+/*PostGIS*/
+
+/* Propriétaire : GeoCompiegnois - http://geo.compiegnois.fr/ */
+/* Auteur : Grégory Bodet */
 
 -- ###############################################################################################################################
 -- ###                                                                                                                         ###
