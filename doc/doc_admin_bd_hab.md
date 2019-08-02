@@ -43,3 +43,46 @@ La base de données Habitat Indigne s'appuie sur des référentiels préexistant
 |x_apps|xapps_geo_vmr_adresse|donnée de référence des adresses |récupération de la géométrie du point d'adresse et de l'adressage|
 
 ---
+
+## Classes d'objets
+
+L'ensemble des classes d'objets unitaires sont stockées dans le schéma m_habitat, celles dérivées et applicatives dans le schéma x_apps, celles dérivées pour les exports opendata dans le schéma x_opendata.
+
+### Classe d'objet géographique et patrimoniale
+
+Sans objet. La géométrie utilisée est celle des points d'adresse. Cette classe est détaillée dans le dossier RVA.
+
+### Classe d'objet signalements
+
+`an_hab_indigne_sign` : table des attributs spécifiques au signalement d'un habitat indigne.
+
+|Nom attribut | Définition | Type  | Valeurs par défaut |
+|:---|:---|:---|:---|  
+|id_dos|Identifiant unique du PEI|bigint| |
+
+
+* 5 triggers :
+  * `t_t1_an_hab_indigne_sign_date_sai` : trigger d'insertion de la date de daisie
+  * `t_t2_an_hab_indigne_sign_date_maj` : trigger de mise à jour de la date de mise à jour 
+  * `t_t3_an_hab_indigne_avancdos` : trigger gérant la mise à jour des prochaines étapes du dossier, des dates de délais et les messages d'erreurs
+  * `t_t4_an_hab_indigne_delete` : trigger gérant la suppression ou non d'un dossier
+  * `t_t5_an_hab_indigne_occprop_delete` : trigger gérant la suppression des occupants, propriétaires et les documents liés à un signalement qui peut être supprimé
+  
+### classes d'objets applicatives métiers sont classés dans le schéma x_apps :
+ 
+`x_apps.xapps_an_v_hab_indigne_tb1` : Vue applicative tableau de bord (tableau 1) décomptant le nombre de dossier par commune par qualification formaté en tableau HTML pour affichage dans l'application Web de gestion
+
+`x_apps.xapps_geo_v_hab_indigne_delais` : Vue applicative sélectionnant les adresses sur lesquelles la date du prochain délais est supérieur à la date du jour (délais dépassé)
+
+`x_apps.xapps_geo_v_hab_indigne` : Vue applicative récupérant le nombre de dossier d'habitat indigne par adresse et affichant l'état du dernier signalement pour affichage la liste des dossiers à la sélection d'une adresse
+
+`x_apps.xapps_an_vmr_cadastre_prop_local` : Vue matérialisée contenant les informations issues du cadastre listant les locaux sur la parcelle avec le propriétaire et son adresse
+
+### classes d'objets applicatives grands publics sont classés dans le schéma x_apps_public :
+
+Sans objet
+
+### classes d'objets opendata sont classés dans le schéma x_opendata :
+
+Sans objet
+
