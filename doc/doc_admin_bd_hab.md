@@ -211,6 +211,9 @@ Sans objet. La géométrie utilisée est celle des points d'adresse. Cette class
 
 `x_apps.xapps_an_vmr_cadastre_prop_local` : Vue matérialisée contenant les informations issues du cadastre listant les locaux sur la parcelle avec le propriétaire et son adresse
 
+Particularité(s) à noter :
+* La vue applicative `xapps_an_vmr_cadastre_prop_local` est liée à la table des signalements afin de remonter les propriétaires de locaux si la référence cadastrale est bien saisie et existe.
+
 ### classes d'objets applicatives grands publics sont classés dans le schéma x_apps_public :
 
 Sans objet
@@ -337,3 +340,42 @@ Valeurs possibles :
 |30|RS (résidence secondaire)|
 
 ---
+
+## Log
+
+Sans objet
+
+---
+
+## Erreur
+
+`x_apps.xapps_an_v_hab_indigne_erreur` : table des messages d'erreurs remontant dans l'application par rapport à la saisie des données via la fiche d'information applicative.
+
+|Nom attribut | Définition | Type  | Valeurs par défaut |
+|:---|:---|:---|:---|
+|gid|Identifiant unique|integer| |
+|id_adresse|Identifiant de l'adresse|integer| |
+|id_dos|Identifiant du signalement|integer| |
+|erreur|Message|character varying(500)| |
+|horodatage|Date (avec heure) de génération du message (ce champ permet de filtrer l'affichage < x secondsdans GEo)|timestamp without time zone| |
+
+Particularité(s) à noter :
+* Cette table est uniquement liée dans GEO à la table des signalements.
+
+---
+
+## Projet QGIS pour la gestion
+
+Sans objet
+
+---
+
+## Traitement automatisé mis en place (Workflow de l'ETL FME)
+
+Sans objet
+
+---
+
+## Modèle conceptuel simplifié
+
+![mcd](img/mcd.jpg)
