@@ -221,8 +221,6 @@ Sans objet
 
 ## Liste de valeurs
 
-
-
 `lt_hab_indigne_avancdos` : Liste des états d'avancement des dossiers de signalement de l'habitat indigne
 
 |Nom attribut | Définition | Type  | Valeurs par défaut |
@@ -232,8 +230,7 @@ Sans objet
 |definition|Détail de l'étape avec les délais|character(100)| |
 |tri|Attribut de tri pour GEO pour afficher les listes de domaines dans l'ordre croisant|integer| |
 
-Particularité(s) à noter :
-* Domaine de valeur issu du format d'échange défini par l'AFIGEO
+Particularité(s) à noter : aucune
 
 Valeurs possibles :
 
@@ -253,4 +250,90 @@ Valeurs possibles :
 
 ---
 
+`lt_hab_indigne_pat` : Liste des états patrimoniaux
 
+|Nom attribut | Définition | Type  | Valeurs par défaut |
+|:---|:---|:---|:---|    
+|code|Code interne des types de patronyme|character varying(2)| |
+|valeur|Libellé des types de patronyme|character varying(80)| |
+
+
+Particularité(s) à noter : aucune
+
+Valeurs possibles :
+
+|code | valeur | 
+|:---|:---|  
+|00|Non renseignée|
+|10|M|
+|20|Mme|
+|30|M et Mme|
+|40|Autre (précisez)|
+
+
+---
+
+`lt_hab_indigne_qualif` : Liste des qualifications de l'habitat indigne
+
+|Nom attribut | Définition | Type  | Valeurs par défaut |
+|:---|:---|:---|:---|    
+|code|Code interne des qualifications|character varying(2)| |
+|valeur|Libellé des qualifications|character varying(80)| |
+
+
+Particularité(s) à noter : aucune
+
+Valeurs possibles :
+
+|code | valeur | 
+|:---|:---|  
+|00|Non renseignée|
+|10|Péril|
+|40|Incurie|
+|50|Indécence|
+|60|Autres santé publique|
+|30|R.S.D (Règlement Sanitaire Départemental)|
+|20|Insalubrité (impropre à l’habitation)|
+
+---
+
+`lt_hab_indigne_situ` : Liste des situations de l'occupant
+
+|Nom attribut | Définition | Type  | Valeurs par défaut |
+|:---|:---|:---|:---|    
+|code|Code interne des situations de l'occupant|character varying(2)| |
+|valeur|Libellé des situations de l'occupant|character varying(80)| |
+
+
+Particularité(s) à noter : aucune
+
+Valeurs possibles :
+
+|code | valeur | 
+|:---|:---|  
+|00|Non renseignée|
+|10|Locataire|
+|20|Propriétaire|
+
+---
+
+`lt_hab_indigne_tprop` : Liste des types de propriétés
+
+|Nom attribut | Définition | Type  | Valeurs par défaut |
+|:---|:---|:---|:---|    
+|code|Code interne des types de propriétés|character varying(2)| |
+|valeur|Libellé des types de propriétés|character varying(80)| |
+
+
+Particularité(s) à noter : aucune
+
+Valeurs possibles :
+
+|code | valeur | 
+|:---|:---|  
+|00|Non renseignée|
+|10|PO (propriétaire occupant)|
+|20|PB (propriétaire bailleur)|
+|30|RS (résidence secondaire)|
+
+---
