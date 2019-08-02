@@ -66,7 +66,11 @@ Sont décrites ici les Géotables et/ou Tables intégrées dans GEO pour les bes
 |av_dos     |||Avancement du dossier (précisions)||Signalement d'habitat indigne à l'adresse et Fiche de signalement d'habitat indigne ||
 |cloture  ||x|Dossier clos|Formaté à oui / non|Fiche de signalement d'habitat indigne ||
 |compt_ad  |||Complément d'adresse||Fiche de signalement d'habitat indigne ||
-|d_ftrav   ||x|Date de fin de travaux||Fiche de signalement d'habitat indigne ||
+|d_ftrav   ||x|Date de fin de travaux|`dd/mm/yyyy`|Fiche de signalement d'habitat indigne ||
+|d_pdelais    ||x|Prochain délai|`dd/mm/yyyy`|Fiche de signalement d'habitat indigne ||
+|d_pvmed     ||x|Date du procès-verbal de mise en demeure|`dd/mm/yyyy`|Fiche de signalement d'habitat indigne ||
+|d_rvisit      ||x|Date du rapport de la visite|`dd/mm/yyyy`|Fiche de signalement d'habitat indigne ||
+|d_signal       ||x|Signalé le|`dd/mm/yyyy`|Fiche de signalement d'habitat indigne ||
 
    * filtres : aucun
    * relations :
