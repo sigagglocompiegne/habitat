@@ -31,4 +31,4 @@ La clôture d'un dossier empêche celui-ci d'être à nouveau ouvert et modifié
 
 ## Schéma fonctionnel
 
-![schema_fonctionnel](img/schema_fonctionnel_amt_fon_eco.png)
+![schema_fonctionnel](img/schema_fonctionnel_habindigne_v1.png)
