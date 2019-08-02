@@ -14,3 +14,4 @@ Ensemble des éléments constituant la mise en oeuvre de la base de données sur
   * [Création des privilèges](sql/habitat_99_grant.sql)
 - [Documentation d'administration de la base](doc/doc_admin_bd_hab.md)
 - [Documentation d'administration de l'application HABITAT](doc/doc_admin_app_hab.md)
+- [Documentation utilisateur de l'application](doc/doc_user_app_hab.md)
