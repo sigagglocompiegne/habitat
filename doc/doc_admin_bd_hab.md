@@ -15,8 +15,17 @@ Pour rappel des grands principes :
 * L'enregistrement de base d'un signalemeent affecte par défaut une date de demande de visite à la date du signalement et génère un délais de visite à 15 jours
 * La mise à jour de l'état d'avancement d'un dossier génère automatiquement la prochaine étape et calcul (si nécessaire ou le demande) une date du prochain délais pour le suivi du dossier.
 
-En résumé : 
-. 
+- entre un signalement et la visite = +15 jours
+- entre la visite et le rapport de visite = +15 jours
+- entre le rapport de visite et le courrier initial = +5 jours (à partir de la date de réception du rapport quui doit être obligatoirement saisie)
+- entre le courrier initial et la réponse du propriétaire : la date du délais doit-être obligatoirement mise à jour
+- entre la réponse du propriétaire et la relance : la date du délais doit-être obligatoirement mise à jour
+- entre la relance et l'arrêté de mise en demeure : la date du délais doit-être obligatoirement mise à jour
+- entre l'arrêté de mise en demeure et l'annonce fin de travaux : la date du délais doit-être obligatoirement mise à jour
+- entre l'annonce fin de travaux et la visite de fin de travaux : + 15 jours
+- entre la visite de fin de travaux et la clôture du dossier : la date du délais doit-être obligatoirement mise à jour
+
+La clôture d'un dossier empêche celui-ci d'être à nouveau ouvert et modifié.
 
 * Le renseignement des références cadastrales permet dans l'onglet Propriétaire d'afficher les informations des locaux et d'accéder à la fiche des locaux de l'application Cadastre-Urbanisme.
 
