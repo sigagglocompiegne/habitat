@@ -219,3 +219,38 @@ Sans objet
 
 Sans objet
 
+## Liste de valeurs
+
+
+
+`lt_hab_indigne_avancdos` : Liste des états d'avancement des dossiers de signalement de l'habitat indigne
+
+|Nom attribut | Définition | Type  | Valeurs par défaut |
+|:---|:---|:---|:---|    
+|code|Code des états d'avancement des dossiers de signalement de l'habitat indigne|character varying(2)| |
+|valeur|Libellé des états d'avancement des dossiers de signalement de l'habitat indigne|character varying(80)| |
+|definition|Détail de l'étape avec les délais|character(100)| |
+|tri|Attribut de tri pour GEO pour afficher les listes de domaines dans l'ordre croisant|integer| |
+
+Particularité(s) à noter :
+* Domaine de valeur issu du format d'échange défini par l'AFIGEO
+
+Valeurs possibles :
+
+|code | valeur | affich
+|:---|:---|:---|:---|   
+|0|Signalement|délai : 15 jours (demande de visite = date ouverture du dossier)|100|
+|1|Visite|délai : 15 jours|101|
+|2|Rapport de visite|délai : 5 jours|102|
+|3|Courrier initiale|Information et demande de travaux au propriétaire -> délai : à remplir manuellement|103|
+|4|Réponse du propriétaire||104|
+|5|Relance ou accusé réception|Délais à remplir manuellement|105|
+|6|Arrêté de mise en demeure|Délais à remplir manuellement|106|
+|7|Annonce de fin de travaux|Délais 15 jours|107|
+|8|Visite de fin de travaux|possibilité de revenir à l’étape 5|108|
+|9|Dossier à clôturer||109|
+|10||Dossier clos, pas d'état et de prochaine étape|110|
+
+---
+
+
