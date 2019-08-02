@@ -1,6 +1,6 @@
 /*Habitat/
-/*Vue applicative */
-/* habitat_10_squelette.sql */
+/*Creation des vues applicatives stockées dans le schéma x_apps */
+/* habitat_61_vues_xapps.sql */
 /*PostGIS*/
 
 /* Propriétaire : GeoCompiegnois - http://geo.compiegnois.fr/ */
