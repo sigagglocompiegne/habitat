@@ -5,8 +5,8 @@
 # Généralité
 
 * Statut
-  - [x] à rédiger
-  - [ ] en cours de rédaction
+  - [ ] à rédiger
+  - [x] en cours de rédaction
   - [ ] relecture
   - [ ] finaliser
   - [ ] révision
