@@ -52,7 +52,7 @@ L'ensemble des classes d'objets unitaires sont stockées dans le schéma m_habit
 
 Sans objet. La géométrie utilisée est celle des points d'adresse. Cette classe est détaillée dans le dossier RVA.
 
-### Classe d'objet signalements
+### Classe d'objet signalement
 
 `an_hab_indigne_sign` : table des attributs spécifiques au signalement d'un habitat indigne.
 
@@ -95,16 +95,111 @@ Sans objet. La géométrie utilisée est celle des points d'adresse. Cette class
 |d_ftrav|Date de fin de travaux (information du propriétaire)|timestamp without time zone| |
 |idu|Clé de référence parcellaire déduie des attributs secpar et numpar saisie par l'utilisateur et regénéré via la trigger. Cette clé permet de faire le lien dans GEO avec latable Parcelle (Alpha) V3 pour accéder à la fiche parcelle depuis la fiche de sig (...)|
 
-
-
-
 * 5 triggers :
   * `t_t1_an_hab_indigne_sign_date_sai` : trigger d'insertion de la date de daisie
   * `t_t2_an_hab_indigne_sign_date_maj` : trigger de mise à jour de la date de mise à jour 
-  * `t_t3_an_hab_indigne_avancdos` : trigger gérant la mise à jour des prochaines étapes du dossier, des dates de délais et les messages d'erreurs
+  * `t_t3_an_hab_indigne_avancdos` : trigger gérant la mise à jour des prochaines étapes du dossier, des dates de délais et les messages d'erreurs, formate également certains attributs notamment les références cadastrales et la regénération de l'IDU.
   * `t_t4_an_hab_indigne_delete` : trigger gérant la suppression ou non d'un dossier
   * `t_t5_an_hab_indigne_occprop_delete` : trigger gérant la suppression des occupants, propriétaires et les documents liés à un signalement qui peut être supprimé
   
+  
+### Classe d'objet occupant
+
+`an_hab_indigne_occ` : table des attributs spécifiques aux occupants du logement faisant l'objet d'un signalement d'habitat indigne.
+
+|Nom attribut | Définition | Type  | Valeurs par défaut |
+|:---|:---|:---|:---|  
+|id_occ|Identifiant unique de l'occupant|integer|nextval('m_habitat.an_hab_indigne_occ_seq'::regclass)|
+|id_dos|Identifiant unique interne ARC du signalement|integer| |
+|nom|Nom de l'occupant|character varying(80)| |
+|prenom|Prénom de l'occupant|character varying(50)| |
+|telf_occ|Téléphone fixe de l'occupant|character varying(14)| |
+|telp_occ|Téléphone portable de l'occupant|character varying(14)| |
+|tela_occ|Autre téléphone de l'occupant|character varying(14)| |
+|e_occ|Mail de l'occupant|character varying(100)| |
+|titre|Titre de l'occupant (lien vers table lt_)|character varying(2)| |
+|titre_aut|Autre titre|character varying(50)| |
+|situation|Situation de l'occupant (lien vers table lt_hab_indigne_occ)|character varying(2)| |
+|nb_occ|Nombre d'occupants du logement|character varying(50)| |
+|enf_occ|Présence d'enfants dans le logement et âge|character varying(100)| |
+|refe|Libellé du référent|character varying(80)| |
+|telf_refe|Téléphone fixe du référent|character varying(14)| |
+|telp_refe|Téléphone portable du référent|character varying(14)| |
+|tela_refe|Autre Téléphone du référent|character varying(14)| |
+|e_refe|Email du référent|character varying(100)| |
+|s_social|Situation sociale|character varying(254)| |
+|t_social|Traitement sociale|character varying(254)| |
+|r_loca|Relogement des locataires|boolean|false|
+|op_sai|Opérateur de saisie de l'information|character varying(80)| |
+|date_sai|Date de saisie de l'information|timestamp without time zone| |
+|date_maj|Date de mise à jour de l'information|timestamp without time zone| |
+|arefe|Libellé du référent (non personne morale)|character varying(80)| |
+|telf_arefe|Téléphone fixe du référent (non personne morale)|character varying(14)| |
+|telp_arefe|Téléphone portable du référent (non personne morale)|character varying(14)| |
+|tela_arefe|Autre Téléphone du référent (non personne morale)|character varying(14)| |
+|e_arefe|Email du référent (non personne morale)|character varying(14)| |
+
+* 2 triggers :
+  * `t_t1_an_hab_indigne_occ_date_sai` : trigger d'insertion de la date de daisie
+  * `t_t2_an_hab_indigne_occ_date_maj` : trigger de mise à jour de la date de mise à jour 
+
+### Classe d'objet propriétaire
+
+`an_hab_indigne_prop` : table des attributs spécifiques aux propriétaires (occupant ou non) faisant l'objet d'un signalement d'habitat indigne.
+
+|Nom attribut | Définition | Type  | Valeurs par défaut |
+|:---|:---|:---|:---| 
+|id_prop|Identifiant unique du propiétaire|integer|nextval('m_habitat.an_hab_indigne_prop_seq'::regclass)|
+|id_dos|Identifiant unique interne ARC du signalement|integer| |
+|nom|Nom du propriétaire ou nom du bailleur|character varying(80)| |
+|prenom|Prénom du propriétaire|character varying(50)| |
+|telf_occ|Téléphone fixe du propriétaire|character varying(14)| |
+|telp_prop|Téléphone portable du propriétaire|character varying(14)| |
+|tela_prop|Autre téléphone pour joindre le propriétaire|character varying(14)| |
+|e_prop|Mail du propriétaire|character varying(100)| |
+|titre|Titre de l'occupant (lien vers la table lt_hab_indigne_titre)|character varying(2)| |
+|titre_aut|Autre titre|character varying(50)| |
+|numero|Numéro dans la voie|integer| |
+|repet|Indice de répétition dans la voie|character varying(10)| |
+|compt_ad|Complément d'adresse|character varying(80)| |
+|type_voie|Type de voie (lien vers la table r_voie.lt_type_voie)|character varying(2)| |
+|nom_voie|Libellé de la voie|character varying(254)| |
+|cp|Code postal|character varying(5)| |
+|commune|Commune|character varying(100)| |
+|pays|Pays|character varying(100)| |
+|contact|Nom d'un contact éventuel privilégié|character varying(100)| |
+|telf_contact|Téléphone fixe du contact privilégié|character varying(14)| |
+|telp_contact|Téléphone portable du contact privilégié|character varying(14)| |
+|tela_contact|Autre téléphone pour joindre le contact privilégié|character varying(14)| |
+|e_contact|Mail du contact privilégié|character varying(100)| |
+|ad_contact|Adresse du contact privilégié|character varying(254)| |
+|t_prop|Type de propriété (lien vers la table lt_hab_indigne_tprop)|character varying(2)| |
+|op_sai|Opérateur de saisie de l'information|character varying(80)| |
+|date_sai|Date de saisie de l'information|timestamp without time zone| |
+|nom_gest|Nom du gestionnaire|character varying(80)| |
+
+* 2 triggers :
+  * `t_t1_an_hab_indigne_prop_date_sai` : trigger d'insertion de la date de daisie
+  * `t_t2_an_hab_indigne_prop_date_maj` : trigger de mise à jour de la date de mise à jour 
+
+### Classe d'objet media
+
+`an_hab_indigne_media` : table des attributs spécifiques aux documents joints au signalement
+|Nom attribut | Définition | Type  | Valeurs par défaut |
+|:---|:---|:---|:---| 
+|gid|Compteur (identifiant interne)|integer|nextval('m_habitat.an_hab_indigne_media_gid_seq'::regclass)|
+|id|Identifiant du signalement|integer| |
+|media|Champ Média de GEO|text| |
+|miniature|Champ miniature de GEO|bytea| |
+|n_fichier|Nom du fichier|text| |
+|t_fichier|Type de média dans GEO|text| |
+|op_sai|Opérateur de saisie (par défaut login de connexion à GEO)|character varying(20)| |
+|l_doc|nom ou léger descriptif du document|character varying(100)| |
+|date_sai|Date de la saisie du document|timestamp without time zone| |
+
+* 1 trigger :
+  * `t_t1_an_hab_indigne_media_date_sai` : trigger d'insertion de la date de daisie
+
 ### classes d'objets applicatives métiers sont classés dans le schéma x_apps :
  
 `x_apps.xapps_an_v_hab_indigne_tb1` : Vue applicative tableau de bord (tableau 1) décomptant le nombre de dossier par commune par qualification formaté en tableau HTML pour affichage dans l'application Web de gestion
