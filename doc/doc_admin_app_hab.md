@@ -10,3 +10,9 @@
   - [ ] relecture
   - [ ] finaliser
   - [ ] révision
+
+* Historique des versions
+
+|Date | Auteur | Description
+|:---|:---|:---|
+|02/08/2019|Grégory BODET|version initiale|
