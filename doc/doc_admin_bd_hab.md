@@ -237,7 +237,7 @@ Particularité(s) à noter :
 
 Valeurs possibles :
 
-|code | valeur | affich
+|code | valeur | definition|tri|
 |:---|:---|:---|:---|   
 |0|Signalement|délai : 15 jours (demande de visite = date ouverture du dossier)|100|
 |1|Visite|délai : 15 jours|101|
