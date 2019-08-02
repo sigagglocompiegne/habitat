@@ -185,6 +185,7 @@ Sans objet. La géométrie utilisée est celle des points d'adresse. Cette class
 ### Classe d'objet media
 
 `an_hab_indigne_media` : table des attributs spécifiques aux documents joints au signalement
+
 |Nom attribut | Définition | Type  | Valeurs par défaut |
 |:---|:---|:---|:---| 
 |gid|Compteur (identifiant interne)|integer|nextval('m_habitat.an_hab_indigne_media_gid_seq'::regclass)|
