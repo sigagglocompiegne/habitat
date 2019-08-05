@@ -71,6 +71,26 @@ Sont décrites ici les Géotables et/ou Tables intégrées dans GEO pour les bes
 |d_pvmed     ||x|Date du procès-verbal de mise en demeure|`dd/mm/yyyy`|Fiche de signalement d'habitat indigne ||
 |d_rvisit      ||x|Date du rapport de la visite|`dd/mm/yyyy`|Fiche de signalement d'habitat indigne ||
 |d_signal       ||x|Signalé le|`dd/mm/yyyy`|Fiche de signalement d'habitat indigne ||
+|d_visit_d        ||x|Date de demande d'une visite|`dd/mm/yyyy`|Fiche de signalement d'habitat indigne ||
+|d_visit_e         ||x|Date de la visite|`dd/mm/yyyy`|Fiche de signalement d'habitat indigne ||
+|d_visitconf        ||x|Date de la visite de conformité|`dd/mm/yyyy`|Fiche de signalement d'habitat indigne ||
+|dos_anah         ||x|Dossier ANAH|`oui/non`|Fiche de signalement d'habitat indigne ||
+|e_dos          ||x|Avancement du dossier|`Liste de domaine lt_hab_indigne_avancdos`|Fiche de signalement d'habitat indigne ||
+|ep_dos           ||x|Prochaine étape|`Liste de domaine lt_hab_indigne_avancdos`|Fiche de signalement d'habitat indigne ||
+|m_avise          |||Information donnée au maire||Fiche de signalement d'habitat indigne ||
+|m_nvisit           |||Motif de la non visite||Fiche de signalement d'habitat indigne ||
+|n_dos            |||Numéro de dossier de l'organisme extérieur ayant fait le signalement||Fiche de signalement d'habitat indigne ||
+|nblog            |||Nombre de logements||Fiche de signalement d'habitat indigne ||
+|nm_doc             |||Dossier||Fiche de signalement d'habitat indigne ||
+|numpar             |||N° parcelle||Fiche de signalement d'habitat indigne ||
+|o_signal              |||Par||Fiche de signalement d'habitat indigne ||
+|observ               |||Observations||Fiche de signalement d'habitat indigne ||
+|occupation               ||x|Le logement ou l'immeuble concerné est-il occupé ?|`oui/non`|Fiche de signalement d'habitat indigne ||
+|q_det               |||Détail de la qualification initiale||Fiche de signalement d'habitat indigne ||
+|q_final            ||x|Qualification finale|`Liste de domaine lt_hab_indigne_qualif`|Fiche de signalement d'habitat indigne ||
+|q_init            ||x|Qualification|`Liste de domaine lt_hab_indigne_qualif`|Fiche de signalement d'habitat indigne ||
+|r_rvisit             |||Résumé du rapport de visite||Fiche de signalement d'habitat indigne ||
+|secpar              |||Section cadastrale||Fiche de signalement d'habitat indigne ||
 
    * filtres : aucun
    * relations :
