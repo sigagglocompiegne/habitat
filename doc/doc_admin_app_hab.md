@@ -220,3 +220,204 @@ Sont décrites ici les Géotables et/ou Tables intégrées dans GEO pour les bes
 # Les fonctionnalités
 
 Sont présentées ici uniquement les fonctionnalités spécifiques à l'application.
+
+## Recherche globale : `Recherche dans la Base Adresse Locale`
+
+Cette recherche permet à l'utilisateur de faire une recherche libre sur une adresse.
+
+Cette recherche a été créée pour l'application RVA. Le détail de celle-ci est donc à visualiser dans le répertoire GitHub rva au niveau de la documentation applicative.
+
+
+## Recherche globale : `Recherche dans la Base de Voie Locale`
+
+Cette recherche permet à l'utilisateur de faire une recherche libre sur le libellé d'une voie.
+
+Cette recherche a été créée pour l'application RVA. Le détail de celle-ci est donc à visualiser dans le répertoire GitHub rva au niveau de la documentation applicative.
+
+
+## Recherche globale : `Localiser une commune de l'ARC`
+
+Cette recherche permet à l'utilisateur de faire une recherche d'une commune.
+
+## Recherche globale : `Localiser un équipement`
+
+Cette recherche permet à l'utilisateur de faire une recherche sur un équipement.
+
+## Recherche (clic sur la carte) : `Signalement d'habitat indigne`
+
+Cette recherche permet à l'utilisateur de cliquer sur la carte au niveau d'une adresse et de remonter les informations de signalement présent à cette adresse.
+
+  * Configuration :
+
+Source : `xapps_geo_v_hab_indigne`
+
+|Attribut|Afficher|Rechercher|Suggestion|Attribut de géométrie|Tri des résultats|
+|:---|:-:|:-:|:-:|:-:|:-:|
+|Adresse|x|||||
+|affiche_signalement|x|||||
+
+
+(la détection des doublons n'est pas activée ici)
+
+ * Filtres : aucun
+
+ * Fiches d'information active : Signalement d'habitat indigne à l'adresse
+
+
+## Recherche (clic sur la carte) : `Bâtiments du parc locatif social`
+
+Cette recherche permet à l'utilisateur de cliquer sur la carte et de remonter les informations d'un bâtiment du parc social.
+
+  * Configuration :
+
+Source : `xapps_geo_vmr_rpls_bati`
+
+|Attribut|Afficher|Rechercher|Suggestion|Attribut de géométrie|Tri des résultats|
+|:---|:-:|:-:|:-:|:-:|:-:|
+|Raisonn social du bailleur (rs)|x|||||
+|affiche_num_bati|x|||||
+|affiche_logement|x|||||
+
+(la détection des doublons n'est pas activée ici)
+
+ * Filtres : aucun
+
+ * Fiches d'information active : Informations sur le bâtiment du parclocatif social
+ 
+ ## Recherche (clic sur la carte) : `Programme de logements sociaux`
+
+Cette recherche permet à l'utilisateur de cliquer sur la carte et de remonter les informations d'un programme du parc social.
+
+  * Configuration :
+
+Source : `xapps_geo_vmr_rpls_programme`
+
+|Attribut|Afficher|Rechercher|Suggestion|Attribut de géométrie|Tri des résultats|
+|:---|:-:|:-:|:-:|:-:|:-:|
+|Raisonn social du bailleur (rs)|x|||||
+|affiche_num_prog|x|||||
+|affiche_logement|x|||||
+
+(la détection des doublons n'est pas activée ici)
+
+ * Filtres : aucun
+
+ * Fiches d'information active : Informations sur le programme de logements sociaux
+ 
+ 
+  ## Recherche (clic sur la carte) : `Observatoire des copropriétés`
+
+Cette recherche permet à l'utilisateur de cliquer sur la carte et de remonter les informations de la copropriété.
+
+  * Configuration :
+
+Source : `xapps_geo_vmr_rpls_programme`
+
+|Attribut|Afficher|Rechercher|Suggestion|Attribut de géométrie|Tri des résultats|
+|:---|:-:|:-:|:-:|:-:|:-:|
+|affiche_nom|x|||||
+|affiche_info|x|||||
+
+
+(la détection des doublons n'est pas activée ici)
+
+ * Filtres : aucun
+
+ * Fiches d'information active : Observatoire des copropriétés
+ 
+   ## Recherche (clic sur la carte) : `Informations au carreau`
+
+Cette recherche permet à l'utilisateur de cliquer sur la carte et de remonter les informations de la copropriété.
+
+  * Configuration :
+
+Source : `geo_carcal_rfl2010_apc`
+
+|Attribut|Afficher|Rechercher|Suggestion|Attribut de géométrie|Tri des résultats|
+|:---|:-:|:-:|:-:|:-:|:-:|
+|affiche_result|x|||||
+|affiche_variable|x|||||
+
+
+(la détection des doublons n'est pas activée ici)
+
+ * Filtres : aucun
+
+ * Fiches d'information active : Informations au carreau
+ 
+    ## Recherche (clic sur la carte) : `Parcelle(s) sélectionnée(s)`
+
+Cette recherche permet à l'utilisateur de cliquer sur la carte et de remonter les informations de la parcelle.
+
+Se reporter au dossier docurba.
+
+## Recherche : `Toutes les recherches cadastrales`
+
+L'ensemble des recherches cadastrales ont été formatées et intégrées par l'éditeur via son module GeoCadastre.
+Seul le nom des certaines recherches a été modifié par l'ARC pour plus de compréhension des utilisateurs.
+
+Cette recherche est détaillée dans le répertoire GitHub `docurba`.
+
+
+## Recherche : `Par identifiant du bailleur`
+
+Cette recherche permet à l'utilisateur de faire une recherche guidée sur l'identifiant du bailleur.
+
+  * Configuration :
+
+Source : `an_rpls`
+
+|Attribut|Afficher|Rechercher|Suggestion|Attribut de géométrie|Tri des résultats|
+|:---|:-:|:-:|:-:|:-:|:-:|
+|affiche_titre|x|||||
+|N° du logement (bailleur) (ident_int)|x|||||
+|Commune|x|||||
+|Adresse (affiche_adresse)|x|||||
+
+(la détection des doublons n'est pas activée ici)
+
+ * Filtres :
+
+|Nom|Obligatoire|Attribut|Condition|Valeur|Champ d'affichage (1)|Champ de valeurs (1)|Champ de tri (1)|Ajout autorisé (1)|Particularités|
+|:---|:-:|:---|:---|:---|:---|:---|:---|:-:|:---|
+|Identifiant bailleur|x|ident_int|est égale à une valeur choisie par l'utilisateur||||||Titre : N° du logement (bailleur)|
+
+
+(1) si liste de domaine
+
+ * Fiches d'information active : Informations sur le logement
+
+
+## Recherche : `Par adresse`
+
+Cette recherche permet à l'utilisateur de faire une recherche guidée sur un logement social par adresse.
+
+  * Configuration :
+
+Source : `an_rpls`
+
+|Attribut|Afficher|Rechercher|Suggestion|Attribut de géométrie|Tri des résultats|
+|:---|:-:|:-:|:-:|:-:|:-:|
+|affiche_titre|x|||||
+|N° du logement (bailleur) (ident_int)|x|||||
+|Commune|x|||||
+|Adresse (affiche_adresse)|x|||||
+
+(la détection des doublons n'est pas activée ici)
+
+ * Filtres :
+
+|Groupe|Jointure|Filtres liés|
+|:---|:-:|:-:|
+|Groupe de filtres par défaut|`ET`|x|
+
+|Nom|Obligatoire|Attribut|Condition|Valeur|Champ d'affichage (1)|Champ de valeurs (1)|Champ de tri (1)|Ajout autorisé (1)|Particularités|
+|:---|:-:|:---|:---|:---|:---|:---|:---|:-:|:---|
+|Commune|x|depcom_red|est égale à une valeur de liste de choix (commune RPLS)||||||Titre : Choisir la commune|
+|Adresse|x|ident_int|est égale à une valeur de liste de choix (Liste adresse)||||||Titre : Saisir une adresse|
+
+
+
+(1) si liste de domaine
+
+ * Fiches d'information active : Informations sur le logement
