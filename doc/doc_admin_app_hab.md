@@ -1189,3 +1189,86 @@ Sont présent ici uniquement les attributs éditables ou disposant d'un mode de 
 **IMPORTANT** : L'édition des données jointes est désactivée.
 
  * Modèle d'impression : aucun
+ 
+ 
+ ## Fiche d'information : `Propriétaire d'un habitat indigne`
+
+Source : ` "an_hab_indigne_prop" `
+
+* Statistique : aucune
+ 
+ * Représentation :
+ 
+|Mode d'ouverture|Taille|Agencement des sections|
+|:---|:---|:---|
+|dans le gabarit|530x650|Onglets|
+
+|Nom de la section|Attributs|Position label|Agencement attribut|Visibilité conditionnelle|Fichie liée|Ajout de données autorisé|
+|:---|:---|:---|:---|:---|:---|:---|
+|Propriétaire|||||||
+
+|Nom de la sous-section|Attributs|Position label|Agencement attribut|Visibilité conditionnelle|Fichie liée|Ajout de données autorisé|
+|:---|:---|:---|:---|:---|:---|:---|
+|(vide)|Titre de l'occupant (titre)|Par défaut|Vertical||||
+
+|Nom de la sous-section|Attributs|Position label|Agencement attribut|Visibilité conditionnelle|Fichie liée|Ajout de données autorisé|
+|:---|:---|:---|:---|:---|:---|:---|
+|(vide)|Autre titre (titre_aut)|Par défaut|Vertical|titre=='40'|||
+
+|Nom de la sous-section|Attributs|Position label|Agencement attribut|Visibilité conditionnelle|Fichie liée|Ajout de données autorisé|
+|:---|:---|:---|:---|:---|:---|:---|
+|(vide)|Nom (ou bailleur) (nom), Prénom, Gestionnaire (nom_gest)|Par défaut|Vertical||||
+
+|Nom de la sous-section|Attributs|Position label|Agencement attribut|Visibilité conditionnelle|Fichie liée|Ajout de données autorisé|
+|:---|:---|:---|:---|:---|:---|:---|
+|Propriété|Type de propriété (t_prop)|par défaut|vertical||||
+
+|Nom de la sous-section|Attributs|Position label|Agencement attribut|Visibilité conditionnelle|Fichie liée|Ajout de données autorisé|
+|:---|:---|:---|:---|:---|:---|:---|
+|Coordonnées|Téléphone fixe (telf_occ), Téléphone portable (telp_prop), Autre téléphone (tela_prop), Email (e_contact)|par défaut|vertical||||
+
+|Nom de la sous-section|Attributs|Position label|Agencement attribut|Visibilité conditionnelle|Fichie liée|Ajout de données autorisé|
+|:---|:---|:---|:---|:---|:---|:---|
+|Adresse|N° (numero), Indice de répétition (repet), Type (type_voie), Voie (nom_voie), Complément d'adresse (compt_ad), Code postal (cp), Commune, Pays|par défaut|vertical||||
+
+|Nom de la sous-section|Attributs|Position label|Agencement attribut|Visibilité conditionnelle|Fichie liée|Ajout de données autorisé|
+|:---|:---|:---|:---|:---|:---|:---|
+|Contact|Nom (contact), Téléphone fixe (telf_contact), Téléphone portable (telp_contact), Autre téléphone (tela_contact), Email (e_contact), Adresse (ad_contact)|par défaut|vertical||||
+
+* Saisie :
+
+Sont présent ici uniquement les attributs éditables ou disposant d'un mode de représentation spécifique.
+
+|Attribut|Obligatoire|Valeur par défaut|Liste de domaine|Représentation|
+|:---|:---|:---|:---|:---|
+|Identifiant unique interne ARC du signalement (id_dos) |||||
+|Nom (nom)  ||||  |
+|Prénom (prenom)   ||||  |
+|Téléphone fixe (telf_occ)   ||||  |
+|Téléphone portable (telp_occ)    ||||  |
+|Autre téléphone (tela_occ)   ||||  |
+|EMail (e_occ)   ||||  |
+|Titre de l'occupant (titre)    ||00|lt_hab_indigne_pat |Liste de choix|
+|Autre titre (titre_aut)   ||||  |
+|Situation (situation)    |x|10|lt_hab_indigne_situ  |Liste de choix|
+|Nombre d'occupants (nb_occ)    ||||  |
+|Nb d'enfants et âge (enf_occ)     ||||  |
+|Nom (refe)      ||||  |
+|Téléphone fixe (telf_refe)      ||||  |
+|Téléphone portable (telp_refe)       ||||  |
+|Autre téléphone (tela_refe)      ||||  |
+|Email (e_refe)     ||||  |
+|Situation sociale (s_social)      ||||  |
+|Traitement sociale (t_social)      ||||  |
+|Relogé (r_loca)        ||false||  |
+|Opérateur de saisie de l'information (op_sai)      ||%USER_LOGIN%||  |
+|Nom (arefe)    ||||  |
+|Téléphone fixe (telf_arefe)     ||||  |
+|Téléphone portable (telp_arefe)     ||||  |
+|Autre téléphone (tela_arefe)    ||||  |
+|Email (e_arefe)    ||||  |
+
+
+**IMPORTANT** : L'édition des données jointes est désactivée.
+
+ * Modèle d'impression : aucun
