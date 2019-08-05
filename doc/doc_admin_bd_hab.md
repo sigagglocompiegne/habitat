@@ -153,7 +153,7 @@ Sans objet. La géométrie utilisée est celle des points d'adresse. Cette class
 |id_dos|Identifiant unique interne ARC du signalement|integer| |
 |nom|Nom du propriétaire ou nom du bailleur|character varying(80)| |
 |prenom|Prénom du propriétaire|character varying(50)| |
-|telf_occ|Téléphone fixe du propriétaire|character varying(14)| |
+|telf_prop|Téléphone fixe du propriétaire|character varying(14)| |
 |telp_prop|Téléphone portable du propriétaire|character varying(14)| |
 |tela_prop|Autre téléphone pour joindre le propriétaire|character varying(14)| |
 |e_prop|Mail du propriétaire|character varying(100)| |
