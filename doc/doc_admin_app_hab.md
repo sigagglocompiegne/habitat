@@ -1632,6 +1632,26 @@ Sans objet
 |||||||geo_adm_quartier|Quartiers de Compiègne||x|x|||||0-1/70000|Contour rouge épaisseur 2, étiquette rouge (nom_maj) 0-1/35000 taille 10 gras italique halo 1 ||
 |Opérations d'aménagements||x||x||xapps_geo_vmr_proc|Par type de procédure|x|x|x||||||||
 |PLUi (données de travail)||x||x||geo_urbproj_dent_creuse|Dents creuses (analyse Potentiel de constructibilité)|x|x|x||||||||
-|Habitat indigne||x|x|||xapps_geo_v_hab_indigne_delais|Délais dépassé||x|x||||||||
-
- 
+|Habitat indigne||x|x|||xapps_geo_v_hab_indigne_delais|Délais dépassé||x|x||||||Picto : habitat_indigne_signalement_delai.svg, Taille 25||
+|||||||xapps_geo_v_hab_indigne_delais|Signalement||x|x|x|||affiche_sign||Picto : habitat_indigne_signalement.svg, Taille 25|Etiquette (nbdos En cours) selon catégorisation, échelle 0-1/3100 rouge taille 14 Gras Halo 1 fond blanc Décalage horiz 14 et vert 12 / Etiquette (nbdos Clos) selon catégorisation, échelle 0-1/3100 noir taille 14 Gras Halo 1 fond blanc Décalage horiz 14 et vert -12 |
+|Patrimoine bâti||x|x|x|x|||||||||||||
+||Parc public|x|x|x|x|xapps_geo_vmr_rpls_bati|N° de bâtiments||x|x|||||0-1/2000|aucune|Etiquette (eti_num_bati) 1-1/2000, Gras taille 10 halo 1|
+|||||||xapps_geo_vmr_rpls_bati_copro|Bâtiment en copropriété||x||||||0-1/15000|Hachure noir||
+|||||||xapps_geo_vmr_rpls_bati|Les bâtiments||x|x||||rs|0-1/15000|En fonction des bailleurs||
+|||||||xapps_geo_vmr_rpls_programme|Programme de logements||x|||||rs|0-1/15000|En fonction des bailleurs||
+||Parc privé|x|x|x|x|geo_hab_obscopro|Copropriété||x|x|||||0-1/15000|Contour noir tiret taille 2|Interactivité info_bulle 0-15000|
+|ANRU et politique de la ville||x|x|x||geo_pv_qp|Etiquette quartiers prioritaires||x|x|||||0-1/30000|aucune|Etiquette (Libellé) Gras taille 12 halo 1 fond blanc contour noir|
+|||||||geo_pv_qp_500m|Quartiers prioritaires (500m)||x|||||||Contour noir pointillé taille 2||
+|||||||geo_pv_qp_300m|Quartiers prioritaires (300m)||x|||||||Contour noir pointillé taille 1.5||
+|||||||geo_pv_qp|Quartiers prioritaires||x|x||||||Fond #00FFFF opacité 20% contour plein même couleur épaisseur 2||
+|||||||geo_pv_zus|ZUS||x|||||||Fond #FF0000 opacité 10% contour plein même couleur épaisseur 2|Intéractivité info-bulle|
+|||||||geo_pv_cucs|CUCS||x|||||||Fond #FFC000 opacité 20% contour plein même couleur épaisseur 2|Intéractivité info-bulle|
+||ANRU élargi (PRU)|x||x||geo_pv_pru|PRU||x|x||||||Contour bleu épaisseur 2||
+|||||||xapps_geo_vmr_proc|Procédure||x|x|x|||l_ope_nom (ZAC du Camp de Royallieu||Contour rouge épaisseur 2||
+|||||||geo_pv_pru_300|PRU élargie de 300m||x|x||||||Contour tiret épaisseur 1||
+|||||||geo_pv_pru_500|PRU élargie de 500m||x|x||||||Contour tiret épaisseur 1||
+|Terrain familial||x||x||geo_hab_terrain_gdv|Terrain GDV||x|||||||Symbol for layer Information ponctuelle taille 12|Intéractivité (comment)|
+|||||||geo_hab_terrain_familial|Terrain familial (potentialité)||x||x|||priorite||Vert : prioritaire, Orange : secondaire, Rouge : écarté|Intéractivité (info_bulle)|
+|Foncier||x||x||geo_vm_fon_proprio_hlm|Propriété d'un organisme HLM||x|x||||ddenom||Selon le bailleur||
+|||||||geo_vm_fon_proprio_pu_arc|Propriétés institutionnelles|x|x|||||||||
+|Données démographiques||x||x||geo_carcal_rfl2010_apc|Revenus moyens||x|x||||moy_srf_c, Classe de revenu (<19500 #FDD49A, 19500-21300 #FCA96D, 21300-22900 #F27249,>=22900 #D93A27)||||
