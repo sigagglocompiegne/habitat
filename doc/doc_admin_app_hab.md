@@ -413,11 +413,675 @@ Source : `an_rpls`
 
 |Nom|Obligatoire|Attribut|Condition|Valeur|Champ d'affichage (1)|Champ de valeurs (1)|Champ de tri (1)|Ajout autorisé (1)|Particularités|
 |:---|:-:|:---|:---|:---|:---|:---|:---|:-:|:---|
-|Commune|x|depcom_red|est égale à une valeur de liste de choix (commune RPLS)||||||Titre : Choisir la commune|
-|Adresse|x|ident_int|est égale à une valeur de liste de choix (Liste adresse)||||||Titre : Saisir une adresse|
+|Commune|x|depcom_red|est égale à une valeur de liste de choix |commune RPLS|||||Titre : Choisir la commune|
+|Adresse|x|ident_int|est égale à une valeur de liste de choix |Liste adresse|||||Titre : Saisir une adresse|
 
 
 
 (1) si liste de domaine
 
  * Fiches d'information active : Informations sur le logement
+
+
+## Recherche : `Par identifiant bâti du bailleur`
+
+Cette recherche permet à l'utilisateur de faire une recherche guidée sur l'identifiant du bâtiment du bailleur.
+
+  * Configuration :
+
+Source : `xapps_geo_vmr_rpls_bati`
+
+|Attribut|Afficher|Rechercher|Suggestion|Attribut de géométrie|Tri des résultats|
+|:---|:-:|:-:|:-:|:-:|:-:|
+|affiche_result|x|||||
+|affiche_num_bati|x|||||
+|Commune|x|||||
+
+
+(la détection des doublons n'est pas activée ici)
+
+ * Filtres :
+
+|Nom|Obligatoire|Attribut|Condition|Valeur|Champ d'affichage (1)|Champ de valeurs (1)|Champ de tri (1)|Ajout autorisé (1)|Particularités|
+|:---|:-:|:---|:---|:---|:---|:---|:---|:-:|:---|
+|Code bâtiment bailleur|x|id_rpls_bati|est égale à une valeur suggérée |RPLS - code batiment|||||Titre : N° du bâtiment (bailleur) :|
+
+
+(1) si liste de domaine
+
+ * Fiches d'information active : Informations sur le bâtiment du parc locatif social
+ 
+ ## Recherche : `Par identifiant du bailleur`
+
+Cette recherche permet à l'utilisateur de faire une recherche guidée d'un programme via l'identifiant du bailleur.
+
+  * Configuration :
+
+Source : `xapps_geo_vmr_rpls_programme`
+
+|Attribut|Afficher|Rechercher|Suggestion|Attribut de géométrie|Tri des résultats|
+|:---|:-:|:-:|:-:|:-:|:-:|
+|affiche_titre|x|||||
+|affiche_num_prog|x|||||
+|Commune|x|||||
+
+
+(la détection des doublons n'est pas activée ici)
+
+ * Filtres :
+
+|Groupe|Jointure|Filtres liés|
+|:---|:-:|:-:|
+|Groupe de filtres par défaut|`ET`|x|
+
+|Nom|Obligatoire|Attribut|Condition|Valeur|Champ d'affichage (1)|Champ de valeurs (1)|Champ de tri (1)|Ajout autorisé (1)|Particularités|
+|:---|:-:|:---|:---|:---|:---|:---|:---|:-:|:---|
+|Commune|x|commune|est égale à une valeur de liste de choix |commune programme|||||Titre : Choisir la commune|
+|Identifiant du programme|x|id_rpls_prog|est égale à une valeur de liste de choix |Identifiant du programme|||||Titre : Sélectionnez le programme de logements|
+
+
+
+(1) si liste de domaine
+
+ * Fiches d'information active : Informations sur le programme de logements sociaux
+ 
+  ## Recherche : `Par nom du bailleur`
+
+Cette recherche permet à l'utilisateur de faire une recherche guidée d'un programme via le nom du bailleur.
+
+  * Configuration :
+
+Source : `xapps_geo_vmr_rpls_programme`
+
+|Attribut|Afficher|Rechercher|Suggestion|Attribut de géométrie|Tri des résultats|
+|:---|:-:|:-:|:-:|:-:|:-:|
+|affiche_titre|x|||||
+|affiche_num_prog|x|||||
+|Commune|x|||||
+
+
+(la détection des doublons n'est pas activée ici)
+
+ * Filtres :
+
+|Groupe|Jointure|Filtres liés|
+|:---|:-:|:-:|
+|Groupe de filtres par défaut|`ET`|x|
+
+|Nom|Obligatoire|Attribut|Condition|Valeur|Champ d'affichage (1)|Champ de valeurs (1)|Champ de tri (1)|Ajout autorisé (1)|Particularités|
+|:---|:-:|:---|:---|:---|:---|:---|:---|:-:|:---|
+|Commune|x|commune|est égale à une valeur de liste de choix |commune programme|||||Titre : Choisir la commune|
+|Raison sociale du bailleur|x|rs_long|est égale à une valeur de liste de choix |Liste bailleurs sociaux|||||Titre : Choisir le nom du bailleur|
+|Identifiant du programme||id_rpls_prog|est égale à une valeur de liste de choix |Identifiant du programme|||||Titre : Sélectionnez le programme de logements|
+
+
+
+(1) si liste de domaine
+
+ * Fiches d'information active : Informations sur le programme de logements sociaux
+ 
+  
+  ## Recherche : `RPLS - statistique communale`
+
+Cette recherche permet à l'utilisateur de faire une recherche guidée sur une commune pour accéder aux statistiques communales en terme de logements sociaux.
+
+  * Configuration :
+
+Source : `an_rpls_com`
+
+|Attribut|Afficher|Rechercher|Suggestion|Attribut de géométrie|Tri des résultats|
+|:---|:-:|:-:|:-:|:-:|:-:|
+|affiche_titre|x|||||
+|Communne|x|||||
+|affiche_recherche|x|||||
+|fiche_logement|x|||||
+
+(la détection des doublons n'est pas activée ici)
+
+ * Filtres :
+
+|Nom|Obligatoire|Attribut|Condition|Valeur|Champ d'affichage (1)|Champ de valeurs (1)|Champ de tri (1)|Ajout autorisé (1)|Particularités|
+|:---|:-:|:---|:---|:---|:---|:---|:---|:-:|:---|
+|Choix commune|x|insee|est égale à une valeur de liste de choix |RPLS - liste commune|||||Titre : Choix de la commune|
+
+
+
+
+(1) si liste de domaine
+
+ * Fiches d'information active : RPLS - Statistique communale
+ 
+  ## Recherche : `RPLS - statistique ARC`
+
+Cette recherche permet à l'utilisateur d'accéder aux statistiques ARC en terme de logements sociaux.
+
+  * Configuration :
+
+Source : `an_rpls_arc`
+
+|Attribut|Afficher|Rechercher|Suggestion|Attribut de géométrie|Tri des résultats|
+|:---|:-:|:-:|:-:|:-:|:-:|
+|affiche_titre|x|||||
+|Nom Epci|x|||||
+|affiche_recherche|x|||||
+|fiche_logement|x|||||
+
+(la détection des doublons n'est pas activée ici)
+
+ * Filtres : aucun
+
+
+(1) si liste de domaine
+
+ * Fiches d'information active : RPLS - Statistique ARC
+ 
+ ## Recherche : `Copropriété par commune`
+
+Cette recherche permet à l'utilisateur de faire une recherche guidée d'une copropriété.
+
+  * Configuration :
+
+Source : `geo_hab_obscopro`
+
+|Attribut|Afficher|Rechercher|Suggestion|Attribut de géométrie|Tri des résultats|
+|:---|:-:|:-:|:-:|:-:|:-:|
+|affiche_nom|x|||||
+|affiche_info|x|||||
+
+
+(la détection des doublons n'est pas activée ici)
+
+ * Filtres :
+
+|Groupe|Jointure|Filtres liés|
+|:---|:-:|:-:|
+|Groupe de filtres par défaut|`ET`|x|
+
+|Nom|Obligatoire|Attribut|Condition|Valeur|Champ d'affichage (1)|Champ de valeurs (1)|Champ de tri (1)|Ajout autorisé (1)|Particularités|
+|:---|:-:|:---|:---|:---|:---|:---|:---|:-:|:---|
+|Commune|x|l_commune|Prédéfinis filtre à liste de choix||||||Titre : Commune|
+
+
+
+(1) si liste de domaine
+
+ * Fiches d'information active : Observatoire des copropriétés
+ 
+ ## Recherche : `Copropriété par nombre de lots`
+
+Cette recherche permet à l'utilisateur de faire une recherche guidée d'une copropriété selon le nombre de lots.
+
+  * Configuration :
+
+Source : `geo_hab_obscopro`
+
+|Attribut|Afficher|Rechercher|Suggestion|Attribut de géométrie|Tri des résultats|
+|:---|:-:|:-:|:-:|:-:|:-:|
+|affiche_nom|x|||||
+|affiche_info|x|||||
+|affiche_lot|x|||||
+
+
+(la détection des doublons n'est pas activée ici)
+
+ * Filtres :
+
+|Groupe|Jointure|Filtres liés|
+|:---|:-:|:-:|
+|Groupe de filtres par défaut|`ET`||
+
+|Sous-Groupe|Jointure|Filtres liés|
+|:---|:-:|:-:|
+|Lots (tous usages)|`ET`||
+
+|Nom|Obligatoire|Attribut|Condition|Valeur|Champ d'affichage (1)|Champ de valeurs (1)|Champ de tri (1)|Ajout autorisé (1)|Particularités|
+|:---|:-:|:---|:---|:---|:---|:---|:---|:-:|:---|
+|Nombre de lots en copro||nblott|est égale à une valeur saisie||||||Titre : Nombre de lots|
+|Lot inférieur à||nblott|est inférieure ou égale à une valeur saisie||||||Titre : Inférieur à|
+|Lot supériieur à||nblott|est supérieure ou égale à une valeur saisie||||||Titre : Supérieur à|
+
+|Sous-Groupe|Jointure|Filtres liés|
+|:---|:-:|:-:|
+|Lots (usage d'habitation)|`ET`||
+
+|Nom|Obligatoire|Attribut|Condition|Valeur|Champ d'affichage (1)|Champ de valeurs (1)|Champ de tri (1)|Ajout autorisé (1)|Particularités|
+|:---|:-:|:---|:---|:---|:---|:---|:---|:-:|:---|
+|Nombre de lots en copro||nbloth|est égale à une valeur saisie||||||Titre : Nombre de lots|
+|Lot inférieur à||nbloth|est inférieure ou égale à une valeur saisie||||||Titre : Inférieur à|
+|Lot supériieur à||nbloth|est supérieure ou égale à une valeur saisie||||||Titre : Supérieur à|
+
+(1) si liste de domaine
+
+ * Fiches d'information active : Observatoire des copropriétés
+ 
+ 
+  ## Recherche : `ANRU - quartier prioritaire`
+
+Cette recherche permet à l'utilisateur de faire une recherche guidée d'un quartier ANRU.
+
+  * Configuration :
+
+Source : `geo_pv_qp`
+
+|Attribut|Afficher|Rechercher|Suggestion|Attribut de géométrie|Tri des résultats|
+|:---|:-:|:-:|:-:|:-:|:-:|
+|Libellé (zone)|x|||||
+
+
+(la détection des doublons n'est pas activée ici)
+
+ * Filtres :
+
+|Groupe|Jointure|Filtres liés|
+|:---|:-:|:-:|
+|Groupe de filtres par défaut|`ET`||
+
+|Nom|Obligatoire|Attribut|Condition|Valeur|Champ d'affichage (1)|Champ de valeurs (1)|Champ de tri (1)|Ajout autorisé (1)|Particularités|
+|:---|:-:|:---|:---|:---|:---|:---|:---|:-:|:---|
+|ANRU - quartier prioritaire|x|zone|est égale à une valeur choisie par l'utilisateur |liste quartier prioritaire|||||Titre : Choisir le quartier|
+
+
+(1) si liste de domaine
+
+ * Fiches d'information active : Observatoire des copropriétés
+ 
+ ## Recherche : `Recherche par adresse`
+
+Cette recherche permet à l'utilisateur de faire une recherche guidée d'un signalement d'habitat indigne par adresse.
+
+  * Configuration :
+
+Source : `xapps_geo_v_hab_indigne`
+
+|Attribut|Afficher|Rechercher|Suggestion|Attribut de géométrie|Tri des résultats|
+|:---|:-:|:-:|:-:|:-:|:-:|
+|Adresse |x|||||
+|affiche_signalement |x|||||
+|geom (xapps_geo_v_hab_indigne) ||||x||
+
+(la détection des doublons n'est pas activée ici)
+
+ * Filtres :
+
+|Groupe|Jointure|Filtres liés|
+|:---|:-:|:-:|
+|Groupe de filtres par défaut|`ET`|x|
+
+|Nom|Obligatoire|Attribut|Condition|Valeur|Champ d'affichage (1)|Champ de valeurs (1)|Champ de tri (1)|Ajout autorisé (1)|Particularités|
+|:---|:-:|:---|:---|:---|:---|:---|:---|:-:|:---|
+|Commune|x|commune|est égale à une valeur choisie par l'utilisateur |Commune (habitat indigne)|||||Titre : Commune|
+|Voie||libvoie_c|est égale à une valeur choisie par l'utilisateur |Voie|||||Titre : Voie|
+|Numéro voie||affiche_num_voie|Prédéfinis filtre à liste de choix ||||||Titre : Numéro|
+
+(1) si liste de domaine
+
+ * Fiches d'information active : Signalement d'habitat indigne à l'asresse
+ 
+ ## Recherche : `Recherche d'un dossier`
+
+Cette recherche permet à l'utilisateur de faire une recherche guidée d'un signalement d'habitat indigne par sa référence de dossier.
+
+  * Configuration :
+
+Source : `an_hab_indigne_sign`
+
+|Attribut|Afficher|Rechercher|Suggestion|Attribut de géométrie|Tri des résultats|
+|:---|:-:|:-:|:-:|:-:|:-:|
+|affiche_dossier |x|||||
+|affiche_dossier_comp |x|||||
+|Qualification (affiche_qinit) |x|||||
+|Adresse |x|||||
+|geom (xapps_geo_v_hab_indigne) ||||x||
+
+(la détection des doublons n'est pas activée ici)
+
+ * Filtres :
+
+|Nom|Obligatoire|Attribut|Condition|Valeur|Champ d'affichage (1)|Champ de valeurs (1)|Champ de tri (1)|Ajout autorisé (1)|Particularités|
+|:---|:-:|:---|:---|:---|:---|:---|:---|:-:|:---|
+|Nom du dossier|x|nm_doc|Prédéfinis filtre à suggestion de valeur ||||||Titre : Nom|
+
+
+(1) si liste de domaine
+
+ * Fiches d'information active : Fiche de signalement d'habitat indigne
+ 
+  ## Recherche : `Recherche d'un occupant`
+
+Cette recherche permet à l'utilisateur de faire une recherche guidée d'un occupant concerné par un signalement d'habitat indigne.
+
+  * Configuration :
+
+Source : `an_hab_indigne_occ`
+
+|Attribut|Afficher|Rechercher|Suggestion|Attribut de géométrie|Tri des résultats|
+|:---|:-:|:-:|:-:|:-:|:-:|
+|Nom, prénom (affiche_occupant) |x|||||
+|affiche_dossier |x|||||
+|Qualification (affiche_qinit) |x|||||
+|Adresse |x|||||
+|geom (xapps_geo_v_hab_indigne) ||||x||
+
+(la détection des doublons n'est pas activée ici)
+
+ * Filtres :
+
+|Nom|Obligatoire|Attribut|Condition|Valeur|Champ d'affichage (1)|Champ de valeurs (1)|Champ de tri (1)|Ajout autorisé (1)|Particularités|
+|:---|:-:|:---|:---|:---|:---|:---|:---|:-:|:---|
+|Occupant||affiche_occupant|Prédéfinis filtre à suggestion de valeur ||||||Titre : Nom|
+
+
+(1) si liste de domaine
+
+ * Fiches d'information active : Occupant d'un habitat indigne
+ 
+ ## Recherche : `Dossier avec un délais dépassé`
+
+Cette recherche permet à l'utilisateur de faire une recherche sur les signalements avec une date du prochain délais dépassé.
+
+  * Configuration :
+
+Source : `an_hab_indigne_sign`
+
+|Attribut|Afficher|Rechercher|Suggestion|Attribut de géométrie|Tri des résultats|
+|:---|:-:|:-:|:-:|:-:|:-:|
+|affiche_dossier |x|||||
+|affiche_dossier_comp |x|||||
+|Qualification (affiche_qinit) |x|||||
+|Adresse |x|||||
+|Dossier (nm_doc) ||||||
+|Numéro de dossier de l'organisme extérieur ayant fait le signalement (n_doc) ||||||
+|Complément d'adresse (compt_ad) ||||||
+|Signalé le (d_signal) ||||||
+|Par (o_signal) ||||||
+|Qualification (q_init) ||||||
+|Détail de la qualification initiale (q_det) ||||||
+|Date de demande d'une visite (d_visit_d) ||||||
+|Date de la visite (d_visit_e) ||||||
+|Opérateur de la visite (o_visit) ||||||
+|Motif de la non visite (m_nvisit) ||||||
+|Date du rapport de la visite (d_rvisit) ||||||
+|Qualification finale (q_final) ||||||
+|Résumé du rapport de visite (r_rvisit) ||||||
+|Action(s) à entreprendre (action) ||||||
+|Avancement du dossier (précisions) (av_dos) ||||||
+|Date du procés-verbal de mise en demeure (d_pvmed) ||||||
+|Prochain délai (d_pdelais) ||||||
+|Date de la visite de conformité (d_visitconf) ||||||
+|Dossier clos (cloture) ||||||
+|Information donnée au maire (m_avise) ||||||
+|Nombre de logements (nblog) ||||||
+|Le logements ou l'immeuble concerné est-il occupé ? (occupation) ||||||
+|Dossier ANAH (dos_anah) ||||||
+|Observations (observ) ||||||
+|geom (xapps_geo_v_hab_indigne) ||||x||
+
+
+
+(la détection des doublons n'est pas activée ici)
+
+ * Filtres :
+
+
+|Groupe|Jointure|Filtres liés|
+|:---|:-:|:-:|
+|Groupe de filtres par défaut|`ET`|x|
+
+|Nom|Obligatoire|Attribut|Condition|Valeur|Champ d'affichage (1)|Champ de valeurs (1)|Champ de tri (1)|Ajout autorisé (1)|Particularités|
+|:---|:-:|:---|:---|:---|:---|:---|:---|:-:|:---|
+|Dossier non clos|x|cloture|est égale à une valeur par défaut |false||||||
+|Dossier horsdélais|x|affiche_delais|est égale à une valeur par défaut |true||||||
+
+(1) si liste de domaine
+
+ * Fiches d'information active : Fiche de signalement d'habitat indigne
+ 
+ ## Recherche : `Rechercher tous les dossiers en cours`
+
+Cette recherche permet à l'utilisateur de faire une recherche sur tous les dossiers de signalements.
+
+  * Configuration :
+
+Source : `an_hab_indigne_sign`
+
+|Attribut|Afficher|Rechercher|Suggestion|Attribut de géométrie|Tri des résultats|
+|:---|:-:|:-:|:-:|:-:|:-:|
+|affiche_dossier |x|||||
+|affiche_dossier_comp |x|||||
+|Qualification (affiche_qinit) |x|||||
+|Adresse |x|||||
+
+
+(la détection des doublons n'est pas activée ici)
+
+ * Filtres :
+
+
+|Groupe|Jointure|Filtres liés|
+|:---|:-:|:-:|
+|Groupe de filtres par défaut|`ET`||
+
+|Nom|Obligatoire|Attribut|Condition|Valeur|Champ d'affichage (1)|Champ de valeurs (1)|Champ de tri (1)|Ajout autorisé (1)|Particularités|
+|:---|:-:|:---|:---|:---|:---|:---|:---|:-:|:---|
+|Dossier non clos|x|cloture|est égale à une valeur par défaut |false||||||
+|Avancement de dossier||est égale à une valeur de liste de choix |lt_hab_indigne_avancdos|||||Titre : Par état d'avancement du dossier|
+|Prochaine étape||est égale à une valeur de liste de choix |lt_hab_indigne_avancdos|||||Titre : Prochaine étape|
+
+(1) si liste de domaine
+
+ * Fiches d'information active : Fiche de signalement d'habitat indigne
+ 
+ 
+ ## Recherche : `Recherche par qualification (initial)`
+
+Cette recherche permet à l'utilisateur de faire une recherche sur tous les dossiers de signalements par leur qualificationn initiale.
+
+  * Configuration :
+
+Source : `an_hab_indigne_sign`
+
+|Attribut|Afficher|Rechercher|Suggestion|Attribut de géométrie|Tri des résultats|
+|:---|:-:|:-:|:-:|:-:|:-:|
+|affiche_dossier |x|||||
+|affiche_dossier_comp |x|||||
+|Qualification (affiche_qinit) |x|||||
+|Adresse |x|||||
+|Dossier (nm_doc) ||||||
+|Numéro de dossier de l'organisme extérieur ayant fait le signalement (n_doc) ||||||
+|Complément d'adresse (compt_ad) ||||||
+|Signalé le (d_signal) ||||||
+|Par (o_signal) ||||||
+|Qualification (q_init) ||||||
+|Détail de la qualification initiale (q_det) ||||||
+|Date de demande d'une visite (d_visit_d) ||||||
+|Date de la visite (d_visit_e) ||||||
+|Opérateur de la visite (o_visit) ||||||
+|Motif de la non visite (m_nvisit) ||||||
+|Date du rapport de la visite (d_rvisit) ||||||
+|Qualification finale (q_final) ||||||
+|Résumé du rapport de visite (r_rvisit) ||||||
+|Action(s) à entreprendre (action) ||||||
+|Avancement du dossier (précisions) (av_dos) ||||||
+|Date du procés-verbal de mise en demeure (d_pvmed) ||||||
+|Prochain délai (d_pdelais) ||||||
+|Date de la visite de conformité (d_visitconf) ||||||
+|Dossier clos (cloture) ||||||
+|Information donnée au maire (m_avise) ||||||
+|Nombre de logements (nblog) ||||||
+|Le logements ou l'immeuble concerné est-il occupé ? (occupation) ||||||
+|Dossier ANAH (dos_anah) ||||||
+|Observations (observ) ||||||
+|geom (xapps_geo_v_hab_indigne) ||||x||
+
+
+(la détection des doublons n'est pas activée ici)
+
+ * Filtres :
+
+
+|Groupe|Jointure|Filtres liés|
+|:---|:-:|:-:|
+|Groupe de filtres par défaut|`ET`|x|
+
+|Nom|Obligatoire|Attribut|Condition|Valeur|Champ d'affichage (1)|Champ de valeurs (1)|Champ de tri (1)|Ajout autorisé (1)|Particularités|
+|:---|:-:|:---|:---|:---|:---|:---|:---|:-:|:---|
+|Dossier non clos|x|cloture|est égale à une valeur par défaut |false||||||
+|Qualification initiale||est égale à une valeur de liste de choix |lt_hab_indigne_qualif|||||Titre : Type de qualification|
+
+
+(1) si liste de domaine
+
+ * Fiches d'information active : Fiche de signalement d'habitat indigne
+ 
+ ## Recherche : `Tableau de bord - habitat indigne`
+
+Cette recherche permet à l'utilisateur d'accéder aux tableaux de bord de l'habitat indigne.
+
+  * Configuration :
+
+Source : `xapps_an_v_hab_indigne_tb1`
+
+|Attribut|Afficher|Rechercher|Suggestion|Attribut de géométrie|Tri des résultats|
+|:---|:-:|:-:|:-:|:-:|:-:|
+|affiche_result_titre |x|||||
+|affiche_result |x|||||
+
+
+(la détection des doublons n'est pas activée ici)
+
+ * Filtres : aucun
+
+
+
+(1) si liste de domaine
+
+ * Fiches d'information active : Tableau de bord - Habitat indigne
+ 
+  
+  ## Fiche d'information : `Fiche de signalement d'habitat indigne`
+
+Source : ` "an_hab_indigne_sign" `
+
+* Statistique : aucune
+ 
+ * Représentation :
+ 
+|Mode d'ouverture|Taille|Agencement des sections|
+|:---|:---|:---|
+|dans le gabarit|1250x800|Onglets|
+
+|Nom de la section|Attributs|Position label|Agencement attribut|Visibilité conditionnelle|Fichie liée|Ajout de données autorisé|
+|:---|:---|:---|:---|:---|:---|:---|
+|Signalement initial|affiche_message|masqué|Vertical||||
+
+|Nom de la sous-section|Attributs|Position label|Agencement attribut|Visibilité conditionnelle|Fichie liée|Ajout de données autorisé|
+|:---|:---|:---|:---|:---|:---|:---|
+|(vide)|Dossier (nm_dos),Numéro de dossier de l'organisme extérieur ayant fait le signalement (n_dos)|Par défaut|Vertical||||
+
+|Nom de la sous-sous-section|Attributs|Position label|Agencement attribut|Visibilité conditionnelle|Fichie liée|Ajout de données autorisé|
+|:---|:---|:---|:---|:---|:---|:---|
+|(vide)|Adresse (adresse - xapps_geo_v_hab_indigne)|Par défaut|Vertical||||
+
+|Nom de la sous-sous-section|Attributs|Position label|Agencement attribut|Visibilité conditionnelle|Fichie liée|Ajout de données autorisé|
+|:---|:---|:---|:---|:---|:---|:---|
+|(vide)|Complément d'adresse (compt_ad),Section cadastrale (secpar),N° parcelle (numpar), Signalé le (d_signal), Par (o_signal), Qualification (q_init), Détail de la qualification initiale (q_det), Nombre de logements (nblog), Le logement ou l'immeuble concerné est-il occupé ? (occupation)|Par défaut|Vertical||||
+
+|Nom de la section|Attributs|Position label|Agencement attribut|Visibilité conditionnelle|Fichie liée|Ajout de données autorisé|
+|:---|:---|:---|:---|:---|:---|:---|
+|Les visites||masqué|Vertical||||
+
+|Nom de la sous-section|Attributs|Position label|Agencement attribut|Visibilité conditionnelle|Fichie liée|Ajout de données autorisé|
+|:---|:---|:---|:---|:---|:---|:---|
+|(vide)|affiche_message|masqué|Vertical||||
+
+|Nom de la sous-section|Attributs|Position label|Agencement attribut|Visibilité conditionnelle|Fichie liée|Ajout de données autorisé|
+|:---|:---|:---|:---|:---|:---|:---|
+|(vide)|Date de demande d'une visite (d_visit_d), Date de la visite (d_visit_e),Opérateur de la visite (o_visit),Motif de la non visite (m_nvisit), Date du rapport de la visite (d_rvisit), Qualification finale (q_init), Résumé du rapport de visite (r_rvisit)|par défaut|Vertical||||
+
+|Nom de la section|Attributs|Position label|Agencement attribut|Visibilité conditionnelle|Fichie liée|Ajout de données autorisé|
+|:---|:---|:---|:---|:---|:---|:---|
+|Le suivi|affiche_message|masqué|Vertical||||
+
+
+|Nom de la sous-section|Attributs|Position label|Agencement attribut|Visibilité conditionnelle|Fichie liée|Ajout de données autorisé|
+|:---|:---|:---|:---|:---|:---|:---|
+|(vide)|Avancement du dossier (e_dos), Prochaine étape (ep_dos), Prochain délais (d_pdelais), Avancement du dossier (précisions) (av_dos),Action(s) à entreprendre (action), Date du procés-verbal de mise en demeure (d_pvmed), Date de fin de travaux (d_ftrav), Date de la visite de conformité (d_visitconf), Information donnée au maire (m_avise), Dossier ANAH (dos_anah), Dossier clos (cloture)|par défaut|Vertical||||
+
+|Nom de la section|Attributs|Position label|Agencement attribut|Visibilité conditionnelle|Fichie liée|Ajout de données autorisé|
+|:---|:---|:---|:---|:---|:---|:---|
+|Observations||masqué|Vertical||||
+
+|Nom de la section|Attributs|Position label|Agencement attribut|Visibilité conditionnelle|Fichie liée|Ajout de données autorisé|
+|:---|:---|:---|:---|:---|:---|:---|
+|(vide)|affiche_message|masqué|Vertical||||
+
+|Nom de la section|Attributs|Position label|Agencement attribut|Visibilité conditionnelle|Fichie liée|Ajout de données autorisé|
+|:---|:---|:---|:---|:---|:---|:---|
+|(vide)|Observations (observ)|par défaut|Vertical||||
+
+
+|Nom de la section|Attributs|Position label|Agencement attribut|Visibilité conditionnelle|Fichie liée|Ajout de données autorisé|
+|:---|:---|:---|:---|:---|:---|:---|
+|Occupant(s)|Nom (nom), Nom,prénom (affiche_occupant), Situation (situation)|par défaut|Vertical||Occupant d'un habitat indigne|x|
+
+|Nom de la section|Attributs|Position label|Agencement attribut|Visibilité conditionnelle|Fichie liée|Ajout de données autorisé|
+|:---|:---|:---|:---|:---|:---|:---|
+|Propriétaires(s)|Nom  (ou bailleur) (nom), Nom (ou bailleur) (affiche_prop), Gestionnaire (nom_gest), Type de propriété (t_prop)|par défaut|Vertical||Propriétaire d'un habitat indigne|x|
+
+|Nom de la sous-section|Attributs|Position label|Agencement attribut|Visibilité conditionnelle|Fichie liée|Ajout de données autorisé|
+|:---|:---|:---|:---|:---|:---|:---|
+|Accès aux informations de la parcelle (source : DGFIP)|Parcelle (affiche_par), Adresse fiscale (Bg Full Address), Propriétaire(s) (BG_PROP_RECORDS)|par défaut|Vertical||||
+
+|Nom de la sous-section|Attributs|Position label|Agencement attribut|Visibilité conditionnelle|Fichie liée|Ajout de données autorisé|
+|:---|:---|:---|:---|:---|:---|:---|
+|Propriétaire(s) des locaux (source : DGFIP)|Gid,Fiche,Lot,Adresse local,Type,Propriétaire,Voirie propriétaire, Complément pro|par défaut|Vertical||||
+
+* Saisie :
+
+Sont présent ici uniquement les attributs éditables ou disposant d'un mode de représentation spécifique.
+
+|Attribut|Obligatoire|Valeur par défaut|Liste de domaine|Représentation|
+|:---|:---|:---|:---|:---|
+|n° SDIS|||||
+|Type|x|NR|lt_pei_type_pei|Liste de choix|
+|Diamètre intérieur||NR|lt_pei_diam_pei|Liste de choix|
+|Raccord ||00|lt_pei_raccord|Liste de choix|
+|Marque ||00|lt_pei_marque|Liste de choix|
+|Source ||NR|lt_pei_source|Liste de choix|
+|Volume |||||
+|Diamètre de canalisation|||||
+|Etat|x|00|lt_pei_etat_pei|Liste de choix|
+|Press statique|||||
+|Pression dynamique|||||
+|Débit |||||
+|Débit Max |||||
+|Debit de remplissage |||||
+|Absence d'anomalie ||0|lt_pei_etat_boolean|Liste de choix|
+|Signalisation conforme ||0|lt_pei_etat_boolean|Liste de choix|
+|Date de disponibilité |||||
+|Date de mise en service |||||
+|Date du dernier contrôle technique |||||
+|Opérateur du contrôle |||||
+|Date de la dernière reconnaissanve opérationnelle |||||
+|Statut  ||00|lt_pei_statut|Liste de choix|
+|Gestionnaire   ||00|lt_pei_gestion|Liste de choix|
+|Délégataire   ||00|lt_pei_delegat|Liste de choix|
+|Centre de secours de 1er appel   ||00000|lt_pei_cs_sdis|Liste de choix|
+|Situation   |||||
+|Observations    ||||Champ texte à plusieurs lignes|
+|Photo     |||||
+|Source de la donnée     |||||
+|Référentiel géographique     ||00|valeur_src_geom|Liste de choix|
+|Date du référentiel      ||0000|||
+|Opérateur de saisie     ||%USER_LOGIN%||| 
+|Anomalie(s)      |||lt_pei_anomalie|Cases à cocher multiples| 
+|Type dans le règlement départemental   |||||
+|Précision   |||||
+|Référence sur le terrain   |||||
+|Référence du contrat de sous-traitance  |||||
+|Type dans le règlement départemental   ||00|lt_pei_id_contrat|Liste de choix|
+|Verrou    |x|false||Caser à cocher|
+
+**IMPORTANT** : L'édition des données jointes est désactivée.
+
+ * Modèle d'impression : Fiche standard + carte et fiche standard
