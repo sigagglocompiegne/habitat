@@ -108,7 +108,7 @@ Sont décrites ici les Géotables et/ou Tables intégrées dans GEO pour les bes
    
    * particularité(s) : aucune
 
-## Table : `an_hab_indigne_sign`
+## Table : ` an_hab_indigne_occ`
 
 |Attributs| Champ calculé | Formatage |Renommage|Particularité/Usage|Utilisation|Exemple|
 |:---|:-:|:-:|:---|:---|:---|:---|
@@ -146,4 +146,37 @@ Sont décrites ici les Géotables et/ou Tables intégrées dans GEO pour les bes
   | an_hab_indigne_sign - xapps_geo_v_hab_indigne|id_dos - id_adresse| 1 (égal) - 1 (égal)|
 
    
+   * particularité(s) : aucune
+   
+   ## Table : `an_hab_indigne_prop`
+
+|Attributs| Champ calculé | Formatage |Renommage|Particularité/Usage|Utilisation|Exemple|
+|:---|:-:|:-:|:---|:---|:---|:---|
+|ad_contact       |||Adresse||Fiche propiétaire||
+|affiche_prop      |x|x|Nom (ou bailleur)|Formate le libellé du propriétaire|Fiche de signalement d'habitat indigne|`CASE WHEN {titre} = '00' THEN {nom}  ' '  {prenom} ELSE CASE WHEN {titre} = '10' THEN 'M' ' '  {nom}  ' ' {prenom} WHEN {titre} = '20' THEN 'Mme'  ' ' {nom}  ' '  {prenom} WHEN {titre} = '30' THEN 'M et Mme'  ' '  {nom}  ' '  {prenom} WHEN {titre} = '40' THEN {titre_aut} ' '  {nom} ' '  {prenom} END END`|
+|arefe      |||Nom||Fiche occupant||
+|compt_ad        |||Complément d'adresse||Fiche propiétaire||
+|contact         |||Complément d'adresse||Fiche propiétaire||
+|cp         |||Code postal||Fiche propiétaire||
+|e_contact         |||EMail||Fiche propiétaire||
+|e_prop         |||Email||Fiche propiétaire||
+|nom         |||Nom (ou bailleur)||Fiche propiétaire||
+|nom_gest         |||Gestionnaire||Fiche propiétaire||
+|nom_voie         |||Voie||Fiche propiétaire||
+|numero         |||N°||Fiche propiétaire||
+|pays          |||Pays||Fiche propiétaire||
+|prenom          |||Prénom||Fiche propiétaire||
+|repet           |||Indice de répétition||Fiche propiétaire||
+|t_prop           ||x|Type de propriété|`Liste de domaine lt_hab_indigne_tprop`|Fiche propiétaire||
+|tela_contact           |||Autre téléphone||Fiche propiétaire||
+|tela_prop            |||Autre téléphone||Fiche propiétaire||
+|telf_contact            |||Téléphone fixe||Fiche propiétaire||
+|telf_occ            |||Téléphone fixe||Fiche propiétaire||
+|telp_contact             |||Téléphone portable||Fiche propiétaire||
+|titre              |||Titre de l'occupant||Fiche propiétaire||
+|titre_aut              |||Autre titre||Fiche propiétaire||
+|type_voie            ||x|Type de voie|`Liste de domaine lt_type_voie`|Fiche propiétaire||
+
+   * filtres : aucun
+   * relations : aucune
    * particularité(s) : aucune
