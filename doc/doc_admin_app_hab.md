@@ -1656,3 +1656,82 @@ Sans objet
 |||||||geo_vm_fon_proprio_pu_arc|Propriétés institutionnelles|x|x|||||||||
 |Données démographiques||x||x||geo_carcal_rfl2010_apc|Revenus moyens||x|x||||moy_srf_c, Classe de revenu (<19500 #FDD49A, 19500-21300 #FCA96D, 21300-22900 #F27249,>=22900 #D93A27)||||
 |Cadastre|||x|||Parcelle (V3)|Cadastre|x||x||x|||0-8000|Fond blanc 1% d'opacité pas de contour||
+
+
+# L'application
+
+* Généralités :
+
+|Gabarit|Thème|Modules spé|Impression|Résultats|
+|:---|:---|:---|:---|:---|
+|Pro|Thème GeoCompiegnois 1.0.7 (habitat)|Partage de lien, Introduction, StreetView, Export Fonctionnalités (Habitat Indigne), GeoCadastre (V3),Google Analytics,Page de connexion perso (config Habitat), javascript, Mulmtimédia (Média-Habitat Indigne), Bandeaux HTML|A4 - Portrait et A4 - Paysage+légende||
+
+* Particularité de certains modules :
+  * Module introduction : ce menu s'ouvre automatiquement à l'ouverture de l'application grâce un code dans le module javascript. Ce module contient une introduction sur l'application, et des liens vers des fiches d'aide.
+  * Module javacript : 
+  `var injector = angular.element('body').injector();
+var acfApplicationService = injector.get('acfApplicationService');
+acfApplicationService.whenLoaded(setTimeout(function(){
+$(".sidepanel-item.launcher-application").click();
+}, 100));`
+  * Module Google Analytics : le n° ID est disponible sur le site de Google Analytics
+  * Module Export Fonctionnalité : ce module permet l'export des données issues des recherches
+
+* Recherche globale :
+
+|Noms|Tri|Nb de sugggestion|Texte d'invite|
+|:---|:---|:---|:---|
+|Recherche dans la Base Adresse Locale,Recherche dans la base de Voie locale, Localiser une commune de l'ARC, Localiser un équipement|alpha|20|Rechercher une adresse, une voie, une commune ou un équipement|
+
+* Carte : `HABITAT`
+
+Comportement au clic : (dés)active uniquement l'item cliqué
+Liste des recherches : Signalement d'habitat indigne, Bâtiments du parc locatif social, Programme de logements sociaux, Observatoire des coprorpiétés, Informations au carreau, Parcelle(s) sélectionnée(s)
+
+* Fonds de plan :
+
+|Nom|Au démarrage|opacité|
+|:---|:---|:---|
+|Cadastre|x|100%|
+|Plan de ville||100%|
+|Carte IGN 25000||100%|
+|Photographie aérienne 2013|x|70%|
+
+* Fonctionnalités
+
+|Groupe|Nom|
+|:---|:---|
+|Recherche cadastrale||
+||Parcelles par référence|
+||Parcelles par adresse fiscale|
+||Parcelles par nom du propriétaire|
+||Parcelles multicritères|
+||Parcelles par nom du propriétaire d'un local|
+||Parcelles par surface|
+|Parc locatif social||
+||Recherche d'un logement|
+||Par identifiant du bailleur|
+||Par adresse|
+||Recherche d'un bâtiment|
+||Par identifiant bâti du bailleur|
+||Recherche d'un programme|
+||Par identifiant du bailleur|
+||Par nom du bailleur|
+||RPLS - statistique communale|
+||RPLS - statistique ARC|
+|Observatoire des copropriétés||
+||Copropriété par commune|
+||Copropriété par nombre de lots|
+|Politique de la ville||
+||ANRU - quartier prioritaire|
+|Habitat indigne|
+||Recherche par adresse|
+||Recherche d'un dossier|
+||Recherche d'un occupant|
+||Dossier avec un délais dépassé|
+||Rechercher tous les dossiers en cours|
+||Recherche par qualification (initial)|
+||Tableau de bord - habitat indigne|
+|Recherche avancée d'une voie ou d'une adresse||
+||Recherche avancée d'une adresse|
+||Recherche avancée d'une voie|
