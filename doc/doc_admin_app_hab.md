@@ -1272,3 +1272,165 @@ Sont présent ici uniquement les attributs éditables ou disposant d'un mode de 
 **IMPORTANT** : L'édition des données jointes est désactivée.
 
  * Modèle d'impression : aucun
+ 
+ ## Fiche d'information : `Informations sur le logement`
+
+Source : ` "an_rpls" `
+
+* Statistique : aucune
+ 
+ * Représentation :
+ 
+|Mode d'ouverture|Taille|Agencement des sections|
+|:---|:---|:---|
+|dans le gabarit|530x650|Onglets|
+
+|Nom de la section|Attributs|Position label|Agencement attribut|Visibilité conditionnelle|Fichie liée|Ajout de données autorisé|
+|:---|:---|:---|:---|:---|:---|:---|
+|(vide)|fiche_titre|masqué|vertical||||
+
+|Nom de la section|Attributs|Position label|Agencement attribut|Visibilité conditionnelle|Fichie liée|Ajout de données autorisé|
+|:---|:---|:---|:---|:---|:---|:---|
+|(vide)|fiche_contingent, fiche titre_1|masqué|Vertical||||
+
+|Nom de la section|Attributs|Position label|Agencement attribut|Visibilité conditionnelle|Fichie liée|Ajout de données autorisé|
+|:---|:---|:---|:---|:---|:---|:---|
+|(vide)|fiche_identification|masqué|Vertical||||
+
+|Nom de la section|Attributs|Position label|Agencement attribut|Visibilité conditionnelle|Fichie liée|Ajout de données autorisé|
+|:---|:---|:---|:---|:---|:---|:---|
+|(vide)|fiche_titre_2|masqué|Vertical||||
+
+|Nom de la section|Attributs|Position label|Agencement attribut|Visibilité conditionnelle|Fichie liée|Ajout de données autorisé|
+|:---|:---|:---|:---|:---|:---|:---|
+|(vide)|fiche_description|masqué|Vertical||||
+
+|Nom de la section|Attributs|Position label|Agencement attribut|Visibilité conditionnelle|Fichie liée|Ajout de données autorisé|
+|:---|:---|:---|:---|:---|:---|:---|
+|(vide)|fiche_titre_3|masqué|Vertical||||
+
+|Nom de la section|Attributs|Position label|Agencement attribut|Visibilité conditionnelle|Fichie liée|Ajout de données autorisé|
+|:---|:---|:---|:---|:---|:---|:---|
+|(vide)|fiche_financement|masqué|Vertical||||
+
+|Nom de la section|Attributs|Position label|Agencement attribut|Visibilité conditionnelle|Fichie liée|Ajout de données autorisé|
+|:---|:---|:---|:---|:---|:---|:---|
+|(vide)|fiche_titre_4|masqué|Vertical||||
+
+|Nom de la section|Attributs|Position label|Agencement attribut|Visibilité conditionnelle|Fichie liée|Ajout de données autorisé|
+|:---|:---|:---|:---|:---|:---|:---|
+|(vide)|fiche_occupation|masqué|Vertical||||
+
+|Nom de la section|Attributs|Position label|Agencement attribut|Visibilité conditionnelle|Fichie liée|Ajout de données autorisé|
+|:---|:---|:---|:---|:---|:---|:---|
+|(vide)|fiche_titre_5|masqué|Vertical||||
+
+|Nom de la section|Attributs|Position label|Agencement attribut|Visibilité conditionnelle|Fichie liée|Ajout de données autorisé|
+|:---|:---|:---|:---|:---|:---|:---|
+|(vide)|fiche_vente|masqué|Vertical||||
+
+|Nom de la section|Attributs|Position label|Agencement attribut|Visibilité conditionnelle|Fichie liée|Ajout de données autorisé|
+|:---|:---|:---|:---|:---|:---|:---|
+|Appartient au bâtiment|N° du bâtiment (bailleur) (id_rpls_bati)|par défaut|Vertical||Informations sur le bâtiment du parc locatif social||
+
+|Nom de la section|Attributs|Position label|Agencement attribut|Visibilité conditionnelle|Fichie liée|Ajout de données autorisé|
+|:---|:---|:---|:---|:---|:---|:---|
+|Appartient au programme|Identifiant du programme (bailleur) (id_rpls_prog)|par défaut|Vertical||Informations sur le programme de logements sociaux||
+
+* Saisie : aucune
+
+
+**IMPORTANT** : L'édition des données jointes est désactivée.
+
+ * Modèle d'impression : Fiche standard
+ 
+  ## Fiche d'information : `Informations sur le bâtiment du parc locatif social`
+
+Source : ` "xapps_geo_vmr_rpls_bati" `
+
+* Statistique : aucune
+ 
+ * Représentation :
+ 
+|Mode d'ouverture|Taille|Agencement des sections|
+|:---|:---|:---|
+|dans le gabarit|530x650|Onglets|
+
+|Nom de la section|Attributs|Position label|Agencement attribut|Visibilité conditionnelle|Fichie liée|Ajout de données autorisé|
+|:---|:---|:---|:---|:---|:---|:---|
+|(vide)|fiche_titre|masqué|vertical||||
+
+|Nom de la section|Attributs|Position label|Agencement attribut|Visibilité conditionnelle|Fichie liée|Ajout de données autorisé|
+|:---|:---|:---|:---|:---|:---|:---|
+|Identification|Identifiant du programme (bailleur) (id_rpls_prog), N° du bâtiment (bailleur) (id_rpls_bati), Raison sociale du bailleur (rs)|par défaut|Vertical||||
+
+|Nom de la section|Attributs|Position label|Agencement attribut|Visibilité conditionnelle|Fichie liée|Ajout de données autorisé|
+|:---|:---|:---|:---|:---|:---|:---|
+|Statistiques||par défaut|Vertical||||
+
+|Nom de la sous-section|Attributs|Position label|Agencement attribut|Visibilité conditionnelle|Fichie liée|Ajout de données autorisé|
+|:---|:---|:---|:---|:---|:---|:---|
+|Composition des logements|Nombre de logements (nb_log), 1 pièce (nb_1piece), 2 pièces (nb_2pieces), 3 pièces (nb_3pieces), 4 pièces (nb_4pieces), 5 pièces (nb_5pieces), Pièces non connues (nb_piece_nc)|par défaut|Vertical||||
+
+|Nom de la sous-section|Attributs|Position label|Agencement attribut|Visibilité conditionnelle|Fichie liée|Ajout de données autorisé|
+|:---|:---|:---|:---|:---|:---|:---|
+|Le contingent|Etat (nb_cont1), Etat (article L.144-1) (nb_cont2),1% logement (nb_cont3),Collectivités (nb_cont4), Etat (R.134-4) (nb_cont5), Autre (nb_cont6), Non réservé (nb_cont7), Non renseigné ou sans objet (nb_contnc)|par défaut|Vertical||||
+
+|Nom de la sous-section|Attributs|Position label|Agencement attribut|Visibilité conditionnelle|Fichie liée|Ajout de données autorisé|
+|:---|:---|:---|:---|:---|:---|:---|
+|Logements présent dans le bâtiment|N° du logement (bailleur) (ident_int),Adresse (affiche_adresse)|par défaut|Vertical||Informations sur le logement||
+
+|Nom de la sous-section|Attributs|Position label|Agencement attribut|Visibilité conditionnelle|Fichie liée|Ajout de données autorisé|
+|:---|:---|:---|:---|:---|:---|:---|
+|Appartient au programme|Identifiant du programme (bailleur) (id_rpls_prog)|par défaut|Vertical||Informations sur le programme de logements sociaux||
+
+* Saisie : aucune
+
+
+**IMPORTANT** : L'édition des données jointes est désactivée.
+
+ * Modèle d'impression : Fiche standard
+ 
+  ## Fiche d'information : `Informations sur le programme de logements sociaux`
+
+Source : ` "xapps_geo_vmr_rpls_programme" `
+
+* Statistique : aucune
+ 
+ * Représentation :
+ 
+|Mode d'ouverture|Taille|Agencement des sections|
+|:---|:---|:---|
+|dans le gabarit|530x650|Onglets|
+
+|Nom de la section|Attributs|Position label|Agencement attribut|Visibilité conditionnelle|Fichie liée|Ajout de données autorisé|
+|:---|:---|:---|:---|:---|:---|:---|
+|(vide)|fiche_titre|masqué|vertical||||
+
+|Nom de la section|Attributs|Position label|Agencement attribut|Visibilité conditionnelle|Fichie liée|Ajout de données autorisé|
+|:---|:---|:---|:---|:---|:---|:---|
+|Identification|Identifiant du programme (bailleur) (id_rpls_prog), Raison sociale du bailleur (rs)|masqué|Vertical||||
+
+|Nom de la section|Attributs|Position label|Agencement attribut|Visibilité conditionnelle|Fichie liée|Ajout de données autorisé|
+|:---|:---|:---|:---|:---|:---|:---|
+|Statistiques||par défaut|Vertical||||
+
+
+|Nom de la sous-section|Attributs|Position label|Agencement attribut|Visibilité conditionnelle|Fichie liée|Ajout de données autorisé|
+|:---|:---|:---|:---|:---|:---|:---|
+|Composition des logements|Nombre de logements (nb_log), 1 pièce (nb_1piece), 2 pièces (nb_2pieces), 3 pièces (nb_3pieces), 4 pièces (nb_4pieces), 5 pièces (nb_5pieces), Pièces non connues (nb_piece_nc)|par défaut|Vertical||||
+
+|Nom de la sous-section|Attributs|Position label|Agencement attribut|Visibilité conditionnelle|Fichie liée|Ajout de données autorisé|
+|:---|:---|:---|:---|:---|:---|:---|
+|Le contingent|Etat (nb_cont1), Etat (article L.144-1) (nb_cont2),1% logement (nb_cont3),Collectivités (nb_cont4), Etat (R.134-4) (nb_cont5), Autre (nb_cont6), Non réservé (nb_cont7), Non renseigné ou sans objet (nb_contnc)|par défaut|Vertical||||
+
+|Nom de la section|Attributs|Position label|Agencement attribut|Visibilité conditionnelle|Fichie liée|Ajout de données autorisé|
+|:---|:---|:---|:---|:---|:---|:---|
+|Bâtiment(s) composant le programme|N° du bâtiment (bailleur) (id_rpls_bati), Nombre de logements (nb_log)|par défaut|Vertical||Informations sur le bâtiment du parc locatif social||
+
+* Saisie : aucune
+
+
+**IMPORTANT** : L'édition des données jointes est désactivée.
+
+ * Modèle d'impression : Fiche standard
