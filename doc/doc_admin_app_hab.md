@@ -1553,3 +1553,59 @@ Source : ` "an_rpls_arc" `
 **IMPORTANT** : L'édition des données jointes est désactivée.
 
  * Modèle d'impression : Fiche standard
+
+
+ ## Fiche d'information : `Observatoire des copropriétés`
+
+Source : ` "geo_hab_obscopro" `
+
+* Statistique : aucune
+ 
+ * Représentation :
+ 
+|Mode d'ouverture|Taille|Agencement des sections|
+|:---|:---|:---|
+|dans le gabarit|530x650|Onglets|
+
+|Nom de la section|Attributs|Position label|Agencement attribut|Visibilité conditionnelle|Fichie liée|Ajout de données autorisé|
+|:---|:---|:---|:---|:---|:---|:---|
+|Données de ratachement||par défaut|vertical||||
+
+|Nom de la sous-section|Attributs|Position label|Agencement attribut|Visibilité conditionnelle|Fichie liée|Ajout de données autorisé|
+|:---|:---|:---|:---|:---|:---|:---|
+|Identification de la copropriété|Identifiant national (id_copro), Nom d'usage de la copropriété (libelle), Résidence service (res_serv), Adresse de référence (adr_ref), Nombre d'adresses copmplémentaires (nbadr_comp), Adresse complémentaire 1 (adr_comp1), Adresse complémentaire 2 (adr_comp2), Adresse complémentaire 3 (adr_comp3), Nombre de parcelles cadastrales (nbpar)|par défaut|vertical||||
+
+|Nom de la sous-section|Attributs|Position label|Agencement attribut|Visibilité conditionnelle|Fichie liée|Ajout de données autorisé|
+|:---|:---|:---|:---|:---|:---|:---|
+|Le syndic|Identification du représentant légal (ident), Commune du représentant légal (commune), Code APE (ape), Mandat en cours dans la propriété (mandat), Date de fin du dernier mandat (date_finm), Administration provisoire (adminp), Syndic provisoire (syndicp), Type de syndic (tsyndic), Syndicat coopératif (syndicc), Syndicat principal ou syndicat secondaire (syndicps), Si secondaire, n° d'immatriculation du principal (nsyndp), Nombre d'ASL auxquelles est rattaché le syndicat de copropriétaires (nbasl), Nombre d'AFUL auxquelles est rattaché le syndicat de copropriétaires (nbaful), Nombre d'Unions de syndicats auxquelles est rattaché le syndicat de copropriétaires (nbusynd)|par défaut|vertical||||
+
+|Nom de la sous-section|Attributs|Position label|Agencement attribut|Visibilité conditionnelle|Fichie liée|Ajout de données autorisé|
+|:---|:---|:---|:---|:---|:---|:---|
+|Les lots|Nombre total de lots (nblott), Nombre total de lots à usage d'habitation, de bureaux ou de commerces (nblot), Nombre de lots à usage d'habitation (nbloth), Nombre de lots de stationnements (nblogp)|par défaut|vertical||||
+
+|Nom de la section|Attributs|Position label|Agencement attribut|Visibilité conditionnelle|Fichie liée|Ajout de données autorisé|
+|:---|:---|:---|:---|:---|:---|:---|
+|Procédures administratives et judiciaires en cours|Nombre d'arrêtés relevant du code de lasanté publique en cours (nbarretsp), Nombre d'arrêtés de péril sur les parties communes en cours (nbarretp), Nombre d'arrêtés sur les équipements communs en cours (nbarrete), Mandat ad hoc en cours (mandatc), Ordonnance de carence (ordoc)|par défaut|vertical||||
+
+|Nom de la section|Attributs|Position label|Agencement attribut|Visibilité conditionnelle|Fichie liée|Ajout de données autorisé|
+|:---|:---|:---|:---|:---|:---|:---|
+|Données financières|Premier exercice comptable (excompt), Date de début de l'exercice comptable (date_deb), Date de fin de l'exercice comptable (date_fin), Date de l'assemblée générale approuvant les comptes (date_ag), Charges pour opérations courantes de l'exercice clos (en €) (chargc), Charges pour travaux et opérations exceptionnelles de l'exercice clos (en €) (chargt), Montant des dettes fournisseurs, rémunérations et autres (en €) (mdette), Montant des sommes restant dues par les copropriétaires (en €) (mdettec), Nombre de copropriétaires débiteurs de plus de 300€ vis-vis du syndicat de copropriétaires (nbprod), Montant du fonds de travaux (en €) (mfontst), Présence de personne(s) employé(s) par le syndicat de copropriétaires (pperso)|par défaut|vertical||||
+
+|Nom de la section|Attributs|Position label|Agencement attribut|Visibilité conditionnelle|Fichie liée|Ajout de données autorisé|
+|:---|:---|:---|:---|:---|:---|:---|
+|Données techniques|Date du règlement de copropriété (date_reg), Période de construction (pconst), Année d'achèvement (aachev), Nombre d'ascenseurs (nbasc), Nombre de bâtiments (nbbat)|par défaut|vertical||||
+
+|Nom de la sous-section|Attributs|Position label|Agencement attribut|Visibilité conditionnelle|Fichie liée|Ajout de données autorisé|
+|:---|:---|:---|:---|:---|:---|:---|
+|Valeur énergétique des bâtiments|Classe A (nbbata), Classe B (nbbatb), Classe C (nbbatc), Classe D (nbbatd), Classe E (nbbatae), Classe F (nbbatf), Classe G (nbbatg), Classe non déterminée (nbbatnd) |par défaut|vertical||||
+
+|Nom de la sous-section|Attributs|Position label|Agencement attribut|Visibilité conditionnelle|Fichie liée|Ajout de données autorisé|
+|:---|:---|:---|:---|:---|:---|:---|
+|Chauffage|Type de chauffage (tchauf), Pour un chauffage collectif (partiel ou total) : ce chauffage est-il urbain ? (uchauf), Pour un chauffage collectif (partiel ou total) non urbain : Energie utilisée (echauf)|par défaut|vertical||||
+
+* Saisie : aucune
+
+
+**IMPORTANT** : L'édition des données jointes est désactivée.
+
+ * Modèle d'impression : Fiche standard
