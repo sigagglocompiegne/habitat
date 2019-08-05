@@ -957,6 +957,35 @@ Source : `xapps_an_v_hab_indigne_tb1`
 
  * Fiches d'information active : Tableau de bord - Habitat indigne
  
+ 
+  ## Fiche d'information : `Signalement d'habitat indigne à l'adresse`
+
+Source : ` "xapps_geo_v_hab_indigne" `
+
+* Statistique : aucune
+ 
+ * Représentation :
+ 
+|Mode d'ouverture|Taille|Agencement des sections|
+|:---|:---|:---|
+|dans le gabarit|1000x650|Vertical|
+
+|Nom de la section|Attributs|Position label|Agencement attribut|Visibilité conditionnelle|Fichie liée|Ajout de données autorisé|
+|:---|:---|:---|:---|:---|:---|:---|
+|(vide)|titre_html|masqué|Vertical||||
+
+|Nom de la section|Attributs|Position label|Agencement attribut|Visibilité conditionnelle|Fichie liée|Ajout de données autorisé|
+|:---|:---|:---|:---|:---|:---|:---|
+|(vide)|titre_liste_html|masqué|Vertical||||
+
+|Nom de la section|Attributs|Position label|Agencement attribut|Visibilité conditionnelle|Fichie liée|Ajout de données autorisé|
+|:---|:---|:---|:---|:---|:---|:---|
+|(vide)|affiche_ordre, Dossier (nm_dos), Etat (affiche_dos), Signalé le (d_signal), Par (o_signal), Qualification initiale (affiche qinit), Avancement du dossier (e_dos), Prochaine étape (ep_dos), Délais (affiche_pdelais)|Par défaut|Vertical||Fiche de signalement d'habitat indigne|x|
+
+
+**IMPORTANT** : L'édition des données jointes est activée. Champ de la relation Adresse activé.
+
+ * Modèle d'impression : aucun
   
   ## Fiche d'information : `Fiche de signalement d'habitat indigne`
 
@@ -1085,3 +1114,6 @@ Sont présent ici uniquement les attributs éditables ou disposant d'un mode de 
 **IMPORTANT** : L'édition des données jointes est désactivée.
 
  * Modèle d'impression : Fiche standard
+ 
+ 
+
