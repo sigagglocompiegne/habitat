@@ -1034,7 +1034,7 @@ Source : ` "an_hab_indigne_sign" `
 
 |Nom de la sous-section|Attributs|Position label|Agencement attribut|Visibilité conditionnelle|Fichie liée|Ajout de données autorisé|
 |:---|:---|:---|:---|:---|:---|:---|
-|Propriétaire(s) des locaux (source : DGFIP)|Gid,Fiche,Lot,Adresse local,Type,Propriétaire,Voirie propriétaire, Complément pro|par défaut|Vertical||||
+|Propriétaire(s) des locaux (source : DGFIP)|Gid,Fiche,Lot,Adresse local,Type,Propriétaire,Voirie propriétaire, Complément propriétaire, Code postal propriétaire|par défaut|Vertical||||
 
 * Saisie :
 
