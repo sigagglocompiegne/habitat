@@ -483,7 +483,7 @@ CREATE TABLE m_habitat.an_hab_indigne_prop
   nom character varying(80), -- Nom du propriétaire ou nom du bailleur
   prenom character varying(50), -- Prénom du propriétaire
   nom_gest character varying(80) -- libellé du gestionnaire
-  telf_occ character varying(14), -- Téléphone fixe du propriétaire
+  telf_prop character varying(14), -- Téléphone fixe du propriétaire
   telp_prop character varying(14), -- Téléphone portable du propriétaire
   tela_prop character varying(14), -- Autre téléphone pour joindre le propriétaire
   e_prop character varying(100), -- Mail du propriétaire
