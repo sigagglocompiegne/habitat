@@ -180,3 +180,15 @@ Sont décrites ici les Géotables et/ou Tables intégrées dans GEO pour les bes
    * filtres : aucun
    * relations : aucune
    * particularité(s) : aucune
+   
+ 
+ ## Table : `an_hab_indigne_media`
+
+|Attributs| Champ calculé | Formatage |Renommage|Particularité/Usage|Utilisation|Exemple|
+|:---|:-:|:-:|:---|:---|:---|:---|
+|l_doc        |||Descriptif||Fiche média habitat indigne||
+|op_sai         ||x|Opérateur de saisie|`%USER_LOGIN%`|Fiche média habitat indigne||
+
+   * filtres : aucun
+   * relations : aucune
+   * particularité(s) : aucune
