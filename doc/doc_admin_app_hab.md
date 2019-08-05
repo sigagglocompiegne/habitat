@@ -1655,3 +1655,4 @@ Sans objet
 |Foncier||x||x||geo_vm_fon_proprio_hlm|Propriété d'un organisme HLM||x|x||||ddenom||Selon le bailleur||
 |||||||geo_vm_fon_proprio_pu_arc|Propriétés institutionnelles|x|x|||||||||
 |Données démographiques||x||x||geo_carcal_rfl2010_apc|Revenus moyens||x|x||||moy_srf_c, Classe de revenu (<19500 #FDD49A, 19500-21300 #FCA96D, 21300-22900 #F27249,>=22900 #D93A27)||||
+|Cadastre|||x|||Parcelle (V3)|Cadastre|x||x||x|||0-8000|Fond blanc 1% d'opacité pas de contour||
