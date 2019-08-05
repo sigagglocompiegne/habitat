@@ -1242,11 +1242,11 @@ Sont présent ici uniquement les attributs éditables ou disposant d'un mode de 
 |Attribut|Obligatoire|Valeur par défaut|Liste de domaine|Représentation|
 |:---|:---|:---|:---|:---|
 |Identifiant unique interne ARC du signalement (id_dos) |||||
-|Nom (nom)  ||||  |
+|Nom (ou bailleur) (nom)    ||||  |
 |Prénom (prenom)   ||||  |
-|Téléphone fixe (telf_occ)   ||||  |
-|Téléphone portable (telp_occ)    ||||  |
-|Autre téléphone (tela_occ)   ||||  |
+|Téléphone fixe (telf_prop)   ||||  |
+|Téléphone portable (telp_prop)    ||||  |
+|Autre téléphone (tela_prop)   ||||  |
 |EMail (e_occ)   ||||  |
 |Titre de l'occupant (titre)    ||00|lt_hab_indigne_pat |Liste de choix|
 |Autre titre (titre_aut)   ||||  |
