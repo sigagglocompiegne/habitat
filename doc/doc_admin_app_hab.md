@@ -1116,4 +1116,76 @@ Sont présent ici uniquement les attributs éditables ou disposant d'un mode de 
  * Modèle d'impression : Fiche standard
  
  
+ ## Fiche d'information : `Occupant d'un habitat indigne`
 
+Source : ` "an_hab_indigne_occ" `
+
+* Statistique : aucune
+ 
+ * Représentation :
+ 
+|Mode d'ouverture|Taille|Agencement des sections|
+|:---|:---|:---|
+|dans le gabarit|530x650|Onglets|
+
+|Nom de la section|Attributs|Position label|Agencement attribut|Visibilité conditionnelle|Fichie liée|Ajout de données autorisé|
+|:---|:---|:---|:---|:---|:---|:---|
+|Occupant (chef de famille)|||||||
+
+|Nom de la sous-section|Attributs|Position label|Agencement attribut|Visibilité conditionnelle|Fichie liée|Ajout de données autorisé|
+|:---|:---|:---|:---|:---|:---|:---|
+|(vide)|Titre de l'occupant (titre)|Par défaut|Vertical||||
+
+|Nom de la sous-section|Attributs|Position label|Agencement attribut|Visibilité conditionnelle|Fichie liée|Ajout de données autorisé|
+|:---|:---|:---|:---|:---|:---|:---|
+|(vide)|Autre titre (titre_aut)|Par défaut|Vertical|titre=='40'|||
+
+|Nom de la sous-section|Attributs|Position label|Agencement attribut|Visibilité conditionnelle|Fichie liée|Ajout de données autorisé|
+|:---|:---|:---|:---|:---|:---|:---|
+|(vide)|Nom, Prénom, Téléphone fixe (telf_occ), Téléphone portable (telp_occ), Autre téléphone (tela_occ), Email (e_occ), Nombre d'occupants (nb_occ), Nb d'enfants et âge (enf_occ)|Par défaut|Vertical||||
+
+|Nom de la section|Attributs|Position label|Agencement attribut|Visibilité conditionnelle|Fichie liée|Ajout de données autorisé|
+|:---|:---|:---|:---|:---|:---|:---|
+|Référent (personne morale)|Nom (refe), Téléphone fixe (telf_refe), Téléphone portable (telp_refe), Autre téléphone (tela_refe), Email (e_refe)|par défaut|vertical||||
+
+|Nom de la section|Attributs|Position label|Agencement attribut|Visibilité conditionnelle|Fichie liée|Ajout de données autorisé|
+|:---|:---|:---|:---|:---|:---|:---|
+|Autre référent (organisme)|Nom (arefe), Téléphone fixe (telf_arefe), Téléphone portable (telp_arefe), Autre téléphone (tela_arefe), Email (e_arefe)|par défaut|vertical||||
+
+* Saisie :
+
+Sont présent ici uniquement les attributs éditables ou disposant d'un mode de représentation spécifique.
+
+|Attribut|Obligatoire|Valeur par défaut|Liste de domaine|Représentation|
+|:---|:---|:---|:---|:---|
+|Identifiant unique interne ARC du signalement (id_dos) |||||
+|Nom (nom)  ||||  |
+|Prénom (prenom)   ||||  |
+|Téléphone fixe (telf_occ)   ||||  |
+|Téléphone portable (telp_occ)    ||||  |
+|Autre téléphone (tela_occ)   ||||  |
+|EMail (e_occ)   ||||  |
+|Titre de l'occupant (titre)    ||00|lt_hab_indigne_pat |Liste de choix|
+|Autre titre (titre_aut)   ||||  |
+|Situation (situation)    |x|10|lt_hab_indigne_situ  |Liste de choix|
+|Nombre d'occupants (nb_occ)    ||||  |
+|Nb d'enfants et âge (enf_occ)     ||||  |
+|Nom (refe)      ||||  |
+|Téléphone fixe (telf_refe)      ||||  |
+|Téléphone portable (telp_refe)       ||||  |
+|Autre téléphone (tela_refe)      ||||  |
+|Email (e_refe)     ||||  |
+|Situation sociale (s_social)      ||||  |
+|Traitement sociale (t_social)      ||||  |
+|Relogé (r_loca)        ||false||  |
+|Opérateur de saisie de l'information (op_sai)      ||%USER_LOGIN%||  |
+|Nom (arefe)    ||||  |
+|Téléphone fixe (telf_arefe)     ||||  |
+|Téléphone portable (telp_arefe)     ||||  |
+|Autre téléphone (tela_arefe)    ||||  |
+|Email (e_arefe)    ||||  |
+
+
+**IMPORTANT** : L'édition des données jointes est désactivée.
+
+ * Modèle d'impression : aucun
