@@ -192,3 +192,31 @@ Sont décrites ici les Géotables et/ou Tables intégrées dans GEO pour les bes
    * filtres : aucun
    * relations : aucune
    * particularité(s) : aucune
+
+## Table : `xapps_an_v_hab_indigne_erreur`
+
+|Attributs| Champ calculé | Formatage |Renommage|Particularité/Usage|Utilisation|Exemple|
+|:---|:-:|:-:|:---|:---|:---|:---|
+|affiche_message    |x|x|null|Formate en HTML le message à afficher dans la fiche d'information en cas d'erreur selon un temps définit (évite un affichage permanent du message)|Fiche d'information PEI|`CASE WHEN extract(epoch from  now()::timestamp) - extract(epoch from {horodatage}::timestamp) <= 3 then '<table width=100%><td bgcolor="#FF000"> <font size=4 color="#ffffff"><center><b>' {erreur} '</b></center></font></td></table>' ELSE '' END`|
+
+
+   * filtres : aucun
+   * relations : aucune
+   * particularité(s) : aucune
+   
+## Table : `xapps_an_vmr_cadastre_prop_local`
+
+|Attributs| Champ calculé | Formatage |Renommage|Particularité/Usage|Utilisation|Exemple|
+|:---|:-:|:-:|:---|:---|:---|:---|
+|url_fichelocal     |x|x|Fiche|Formate en HTML le lien pour accéder à la fiche local en PDF de GEO|Fiche d'information des propriétaires|``CASE WHEN {id_local} is not null or {id_local} <> '' THEN
+'<a href="http://geo.compiegnois.fr/cadastre/getDescriptifLocal?dbcp=b6b597b9-cb6c-11e7-8f4e-4dc660d3c418&catalogId=default&schema=r_bg_majic&id_local=' || {id_local} || '" target="_blank">' '<img src="http://geo.compiegnois.fr/documents/cms/fi_local_geo.png" alt="">''</a>'ELSE''END`|
+
+
+   * filtres : aucun
+   * relations : aucune
+   * particularité(s) : aucune
+   
+
+# Les fonctionnalités
+
+Sont présentées ici uniquement les fonctionnalités spécifiques à l'application.
