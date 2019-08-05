@@ -1247,26 +1247,26 @@ Sont présent ici uniquement les attributs éditables ou disposant d'un mode de 
 |Téléphone fixe (telf_prop)   ||||  |
 |Téléphone portable (telp_prop)    ||||  |
 |Autre téléphone (tela_prop)   ||||  |
-|EMail (e_occ)   ||||  |
+|EMail (e_prop)   ||||  |
 |Titre de l'occupant (titre)    ||00|lt_hab_indigne_pat |Liste de choix|
 |Autre titre (titre_aut)   ||||  |
-|Situation (situation)    |x|10|lt_hab_indigne_situ  |Liste de choix|
-|Nombre d'occupants (nb_occ)    ||||  |
-|Nb d'enfants et âge (enf_occ)     ||||  |
-|Nom (refe)      ||||  |
-|Téléphone fixe (telf_refe)      ||||  |
-|Téléphone portable (telp_refe)       ||||  |
-|Autre téléphone (tela_refe)      ||||  |
-|Email (e_refe)     ||||  |
-|Situation sociale (s_social)      ||||  |
-|Traitement sociale (t_social)      ||||  |
-|Relogé (r_loca)        ||false||  |
-|Opérateur de saisie de l'information (op_sai)      ||%USER_LOGIN%||  |
-|Nom (arefe)    ||||  |
-|Téléphone fixe (telf_arefe)     ||||  |
-|Téléphone portable (telp_arefe)     ||||  |
-|Autre téléphone (tela_arefe)    ||||  |
-|Email (e_arefe)    ||||  |
+|N° (numero)     |||  ||
+| Indice de répétition (repet)    |||  ||
+| Complément d'adresse (compt_ad)   |||  ||
+|Type (type_voie)  ||00|lt_type_voie |Liste de choix|
+|Voie (nom_voie)   ||| ||
+|Code postal (cp)    ||| ||
+|Commune (commune)    ||| ||
+|Pays (pays)     ||| ||
+|Nom (contact)     ||| ||
+|Téléphone fixe (telf_contact)     ||| ||
+|Téléphone portable (telp_contact)     ||| ||
+|Autre téléphone (tela_contact)      ||| ||
+|EMail (e_contact)       ||| ||
+|Adresse (ad_contact)        ||| ||
+|Type de propriété (t_prop)        |x|10|lt_hab_indigne_tprop  |Liste de choix|
+|Opérateur de saisie de l'information (op_sai)         ||%USER_LOGIN%| ||
+|Gestionnaire (nom_gest)         ||| ||
 
 
 **IMPORTANT** : L'édition des données jointes est désactivée.
