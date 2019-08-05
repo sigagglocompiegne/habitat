@@ -1034,7 +1034,15 @@ Source : ` "an_hab_indigne_sign" `
 
 |Nom de la sous-section|Attributs|Position label|Agencement attribut|Visibilité conditionnelle|Fichie liée|Ajout de données autorisé|
 |:---|:---|:---|:---|:---|:---|:---|
-|Propriétaire(s) des locaux (source : DGFIP)|Gid,Fiche,Lot,Adresse local,Type,Propriétaire,Voirie propriétaire, Complément propriétaire, Code postal propriétaire|par défaut|Vertical||||
+|Propriétaire(s) des locaux (source : DGFIP)|Gid,Fiche (url_fichelocal),Lot (lot), Adresse local (adresse_local) ,Type (type), Propriétaire,Voirie propriétaire, Complément propriétaire, Code postal propriétaire|par défaut|Vertical||||
+
+|Nom de la section|Attributs|Position label|Agencement attribut|Visibilité conditionnelle|Fichie liée|Ajout de données autorisé|
+|:---|:---|:---|:---|:---|:---|:---|
+|Document(s)|Champ de miniature de GEO (miniature), Nom du fichier (n_fichier)|par défaut|Vertical||Media Signalement Habitat Indigne||
+
+|Nom de la section|Attributs|Position label|Agencement attribut|Visibilité conditionnelle|Fichie liée|Ajout de données autorisé|
+|:---|:---|:---|:---|:---|:---|:---|
+|(vide)|Opérateur de saisie de l'information (op_sai)|masqué|Vertical||||
 
 * Saisie :
 
@@ -1042,46 +1050,38 @@ Sont présent ici uniquement les attributs éditables ou disposant d'un mode de 
 
 |Attribut|Obligatoire|Valeur par défaut|Liste de domaine|Représentation|
 |:---|:---|:---|:---|:---|
-|n° SDIS|||||
-|Type|x|NR|lt_pei_type_pei|Liste de choix|
-|Diamètre intérieur||NR|lt_pei_diam_pei|Liste de choix|
-|Raccord ||00|lt_pei_raccord|Liste de choix|
-|Marque ||00|lt_pei_marque|Liste de choix|
-|Source ||NR|lt_pei_source|Liste de choix|
-|Volume |||||
-|Diamètre de canalisation|||||
-|Etat|x|00|lt_pei_etat_pei|Liste de choix|
-|Press statique|||||
-|Pression dynamique|||||
-|Débit |||||
-|Débit Max |||||
-|Debit de remplissage |||||
-|Absence d'anomalie ||0|lt_pei_etat_boolean|Liste de choix|
-|Signalisation conforme ||0|lt_pei_etat_boolean|Liste de choix|
-|Date de disponibilité |||||
-|Date de mise en service |||||
-|Date du dernier contrôle technique |||||
-|Opérateur du contrôle |||||
-|Date de la dernière reconnaissanve opérationnelle |||||
-|Statut  ||00|lt_pei_statut|Liste de choix|
-|Gestionnaire   ||00|lt_pei_gestion|Liste de choix|
-|Délégataire   ||00|lt_pei_delegat|Liste de choix|
-|Centre de secours de 1er appel   ||00000|lt_pei_cs_sdis|Liste de choix|
-|Situation   |||||
-|Observations    ||||Champ texte à plusieurs lignes|
-|Photo     |||||
-|Source de la donnée     |||||
-|Référentiel géographique     ||00|valeur_src_geom|Liste de choix|
-|Date du référentiel      ||0000|||
-|Opérateur de saisie     ||%USER_LOGIN%||| 
-|Anomalie(s)      |||lt_pei_anomalie|Cases à cocher multiples| 
-|Type dans le règlement départemental   |||||
-|Précision   |||||
-|Référence sur le terrain   |||||
-|Référence du contrat de sous-traitance  |||||
-|Type dans le règlement départemental   ||00|lt_pei_id_contrat|Liste de choix|
-|Verrou    |x|false||Caser à cocher|
+|ref_interne (id_dos)|||||
+|Dossier (nm_doc)|x||||
+|Numéro de dossier de l'organisme extérieur ayant fait le signalement (n_dos)|||||
+|Complément d'adresse (compt_ad) ||||  |
+|Par |x|||  |
+|Signalé le (d_signal) |x|%CURRENT_DATE%|||
+|Qualification (q_init) |x|00|lt_hab_indigne_qualif |Liste de choix|
+|Détail de la qualification initiale (q_det)||||Champ texte à plusieurs lignes|
+|Date de demande d'une visite (d_visit_d)|x|%CURRENT_DATE%|||
+|Date de la visite (d_visit_e)|||||
+|Motif de la non visite (m_nvisit)||||Champ texte à plusieurs lignes|
+|Date du rapport de la visite (d_rvisit) |||||
+|Qualification finale (q_final) ||00|lt_hab_indigne_qualif |Liste de choix|
+|Résumé du rapport de visite (r_rvisit)  ||| |Champ texte à plusieurs lignes|
+|Action(s) à entreprendre (action)   ||| |Champ texte à plusieurs lignes|
+|Avancement du dossier (précisions) (av_dos)   ||| |Champ texte à plusieurs lignes|
+|Date du procès-verbal de mise en demeure (d_pvmed)   ||| ||
+|Prochain délai (d_pdelais)     ||| ||
+|Date de la visite de conformité (d_visitconf)      ||| ||
+|Dossier clos (cloture)     ||false| |case à cocher|
+|Information donnée au maire (m_avise)      ||false| |case à cocher|
+|Nombre de logements (nblog)      ||| ||
+|Le logement ou l'immeuble concerné est-il occupé ? (occupation)   ||true| |case à cocher|
+|Dossier ANAH (dos_anah)   ||false| |case à cocher|
+|Observations (observ) ||| |Champ texte à plusieurs lignes|
+|Opérateur de saisie de l'information (op_sai)  ||%USER_LOGIN%| ||
+|Section cadastrale (secpar)       ||| ||
+|N° parcelle (numpar)       ||| ||
+|Avancement du dossier (e_dos)        ||0| lt_hab_indigne_avancdos |Liste de choix|
+|Date de fin de travaux (d_ftrav)         |||  |  |
+
 
 **IMPORTANT** : L'édition des données jointes est désactivée.
 
- * Modèle d'impression : Fiche standard + carte et fiche standard
+ * Modèle d'impression : Fiche standard
