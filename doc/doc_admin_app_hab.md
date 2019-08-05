@@ -108,3 +108,42 @@ Sont décrites ici les Géotables et/ou Tables intégrées dans GEO pour les bes
    
    * particularité(s) : aucune
 
+## Table : `an_hab_indigne_sign`
+
+|Attributs| Champ calculé | Formatage |Renommage|Particularité/Usage|Utilisation|Exemple|
+|:---|:-:|:-:|:---|:---|:---|:---|
+|affiche_occupant     |x|x|Nom, prénom|Formate du nom et prénom dans un seul attribut d'affichage|Fiche de signalement d'habitat indigne, recherche d'un occupant, filtre occupant|`CASE WHEN {titre} = '00' THEN {nom}  ' '  {prenom} ELSE CASE WHEN {titre} = '10' THEN 'M' ' '  {nom}  ' ' {prenom} WHEN {titre} = '20' THEN 'Mme'  ' ' {nom}  ' '  {prenom} WHEN {titre} = '30' THEN 'M et Mme'  ' '  {nom}  ' '  {prenom} WHEN {titre} = '40' THEN {titre_aut} ' '  {nom} ' '  {prenom} END END`|
+|arefe      |||Nom||Fiche occupant||
+|e_arefe       |||Email||Fiche occupant||
+|e_occ       |||Email||Fiche occupant||
+|e_refe       |||Email||Fiche occupant||
+|enf_occ       |||Nb d'enfants et âge||Fiche occupant||
+|nb_occ      |||Nombre d'occupants||Fiche occupant||
+|nom       |||Nom||Fiche occupant||
+|prenom       |||Prénom||Fiche occupant||
+|r_loca       ||x|Relogé|`oui/non`|Fiche occupant||
+|refe        |||Nom||Fiche occupant||
+|s_social        |||Situation sociale||Fiche occupant||
+|situation        |||Situation|`Liste de domaine lt_hab_indigne_situ`|Fiche occupant||
+|t_social        ||x|Traitement sociale||Fiche occupant||
+|tela_arefe        |||Autre téléphone||Fiche occupant||
+|tela_occ         |||Autre téléphone||Fiche occupant||
+|tela_refe         |||Autre téléphone||Fiche occupant||
+|telf_arefe         |||Téléphone fixe||Fiche occupant||
+|telf_occ         |||Téléphone fixe ||Fiche occupant||
+|telf_refe         |||Téléphone fixe||Fiche occupant||
+|telp_arefe          |||Téléphone portable||Fiche occupant||
+|telp_occ          |||Téléphone portable||Fiche occupant||
+|telp_refe          |||Téléphone portable||Fiche occupant||
+|titre           |||Titre de l'occupant||Fiche occupant||
+|titre_aut           |||Autre titre||Fiche occupant||
+
+   * filtres : aucun
+   * relations :
+   
+   |Géotables ou Tables| Champs de jointure | Type |
+  |:---|:---|:---|
+  | an_hab_indigne_sign - xapps_geo_v_hab_indigne|id_dos - id_adresse| 1 (égal) - 1 (égal)|
+
+   
+   * particularité(s) : aucune
