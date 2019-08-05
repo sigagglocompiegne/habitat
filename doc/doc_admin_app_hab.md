@@ -1609,3 +1609,29 @@ Source : ` "geo_hab_obscopro" `
 **IMPORTANT** : L'édition des données jointes est désactivée.
 
  * Modèle d'impression : Fiche standard
+ 
+ 
+ ## Analyse :
+
+Aucune
+
+## Statistique :
+
+Aucune
+
+## Modification géométrique : 
+
+Sans objet
+
+ # La cartothèque
+
+|Groupe|Sous-groupe|Visible dans la légende|Visible au démarrage|Détails visibles|Déplié par défaut|Geotable|Renommée|Issue d'une autre carte|Visible dans la légende|Visible au démarrage|Déplié par défaut|Couche sélectionnable|Couche accrochable|Catégorisation|Seuil de visibilité|Symbologie|Autres|
+|:---|:---|:-:|:-:|:-:|:-:|:---|:---|:-:|:-:|:-:|:-:|:-:|:---|:---|:---|:---|:---|
+||||x|||xapps_geo_vmr_adresse|Adresse||||||||1/0-1/2000|aucun, taille 8, blanc, opacité 1%|Interactivité avec le champ calculé infobulle échelle 0-1/2000|
+|Limites administratives||x|x|x||geo_vm_osm_commune_arcba|Limites communales||x|x||||||Contour noir épaisseur 1.5, étiquette (commune_M) 0-1/5000 taille 10 halo 1 ||
+|||||||geo_adm_quartier|Quartiers de Compiègne||x|x|||||0-1/70000|Contour rouge épaisseur 2, étiquette rouge (nom_maj) 0-1/35000 taille 10 gras italique halo 1 ||
+|Opérations d'aménagements||x||x||xapps_geo_vmr_proc|Par type de procédure|x|x|x||||||||
+|PLUi (données de travail)||x||x||geo_urbproj_dent_creuse|Dents creuses (analyse Potentiel de constructibilité)|x|x|x||||||||
+|Habitat indigne||x|x|||xapps_geo_v_hab_indigne_delais|Délais dépassé||x|x||||||||
+
+ 
