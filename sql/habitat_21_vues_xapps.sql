@@ -351,7 +351,7 @@ SELECT s.id_dos,s.nm_doc,a.geom
 
 FROM
 m_habitat.an_hab_indigne_sign s , x_apps.xapps_geo_vmr_adresse a
-WHERE s.id_adresse = a.id_adresse AND s.q_init ='10';
+WHERE s.id_adresse = a.id_adresse AND s.q_init ='10' AND cloture = false;
 
 ALTER TABLE x_apps.xapps_geo_v_hab_indigne_peril
   OWNER TO sig_create;
