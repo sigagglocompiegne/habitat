@@ -17,5 +17,5 @@
 /*
 #################################################################### SUIVI CODE SQL ####################################################################
 2019-08-02 : GB / initialisation du code uniquement pour la partie gestion Habitat indigne
-
+2019-08-08 : GB / ajout d'une vue applicative pour faire afficher uniquement les adresses avec au moins un péril non clos
 
