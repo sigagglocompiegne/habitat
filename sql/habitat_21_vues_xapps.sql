@@ -335,3 +335,28 @@ req_complete t
 
 COMMENT ON VIEW x_apps.xapps_an_v_hab_indigne_tb1
   IS 'Vue applicative tableau de bord (tableau 1) décomptant le nombre de dossier par commune par qualification pour affichage dans GEO';
+
+
+-- View: x_apps.xapps_geo_v_hab_indigne_peril
+
+-- DROP VIEW x_apps.xapps_geo_v_hab_indigne_peril;
+
+
+-- VUE affichant à l'adresse si il existe au moins 1 signalement de péril
+-- affichage dans la carte sur GEO
+-- filtré sur les communes de l'ARC
+
+CREATE OR REPLACE VIEW x_apps.xapps_geo_v_hab_indigne_peril AS 
+SELECT s.id_dos,s.nm_doc,a.geom
+
+FROM
+m_habitat.an_hab_indigne_sign s , x_apps.xapps_geo_vmr_adresse a
+WHERE s.id_adresse = a.id_adresse AND s.q_init ='10';
+
+ALTER TABLE x_apps.xapps_geo_v_hab_indigne_peril
+  OWNER TO sig_create;
+GRANT ALL ON TABLE x_apps.xapps_geo_v_hab_indigne_peril TO create_sig;
+GRANT SELECT, UPDATE, INSERT, DELETE ON TABLE x_apps.xapps_geo_v_hab_indigne_peril TO edit_sig;
+GRANT SELECT ON TABLE x_apps.xapps_geo_v_hab_indigne_peril TO read_sig;
+COMMENT ON VIEW x_apps.xapps_geo_v_hab_indigne_peril
+  IS 'Vue applicative récupérant les adresses avec au moins un signalement de péril pour affichage sur la carte de l''application HABITAT';
