@@ -1791,6 +1791,7 @@ Liste des recherches : Signalement d'habitat indigne, Bâtiments du parc locatif
 ||Recherche d'un dossier|
 ||Recherche d'un occupant|
 ||Dossier avec un délais dépassé|
+||Dossier avec un péril|
 ||Rechercher tous les dossiers en cours|
 ||Recherche par qualification (initial)|
 ||Tableau de bord - habitat indigne|
