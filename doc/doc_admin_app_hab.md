@@ -1693,7 +1693,8 @@ Sans objet
 |||||||geo_adm_quartier|Quartiers de Compiègne||x|x|||||0-1/70000|Contour rouge épaisseur 2, étiquette rouge (nom_maj) 0-1/35000 taille 10 gras italique halo 1 ||
 |Opérations d'aménagements||x||x||xapps_geo_vmr_proc|Par type de procédure|x|x|x||||||||
 |PLUi (données de travail)||x||x||geo_urbproj_dent_creuse|Dents creuses (analyse Potentiel de constructibilité)|x|x|x||||||||
-|Habitat indigne||x|x|||xapps_geo_v_hab_indigne_delais|Délais dépassé||x|x||||||Picto : habitat_indigne_signalement_delai.svg, Taille 25||
+|Habitat indigne||x|x|||xapps_geo_v_hab_indigne_peril|Péril||x|x||||||Picto : signalement_rouge.svg, Taille 30||
+|||||||xapps_geo_v_hab_indigne_delais|Délais dépassé||x|x||||||Picto : habitat_indigne_signalement_delai.svg, Taille 25||
 |||||||xapps_geo_v_hab_indigne_delais|Signalement||x|x|x|||affiche_sign||Picto : habitat_indigne_signalement.svg, Taille 25|Etiquette (nbdos En cours) selon catégorisation, échelle 0-1/3100 rouge taille 14 Gras Halo 1 fond blanc Décalage horiz 14 et vert 12 / Etiquette (nbdos Clos) selon catégorisation, échelle 0-1/3100 noir taille 14 Gras Halo 1 fond blanc Décalage horiz 14 et vert -12 |
 |Patrimoine bâti||x|x|x|x|||||||||||||
 ||Parc public|x|x|x|x|xapps_geo_vmr_rpls_bati|N° de bâtiments||x|x|||||0-1/2000|aucune|Etiquette (eti_num_bati) 1-1/2000, Gras taille 10 halo 1|
