@@ -207,6 +207,8 @@ Sans objet. La géométrie utilisée est celle des points d'adresse. Cette class
 
 `x_apps.xapps_geo_v_hab_indigne_delais` : Vue applicative sélectionnant les adresses sur lesquelles la date du prochain délais est supérieur à la date du jour (délais dépassé)
 
+`x_apps.xapps_geo_v_hab_indigne_peril` : Vue applicative sélectionnant les adresses sur lesquelles un dossier de péril est ouvert.
+
 `x_apps.xapps_geo_v_hab_indigne` : Vue applicative récupérant le nombre de dossier d'habitat indigne par adresse et affichant l'état du dernier signalement pour affichage la liste des dossiers à la sélection d'une adresse
 
 `x_apps.xapps_an_vmr_cadastre_prop_local` : Vue matérialisée contenant les informations issues du cadastre listant les locaux sur la parcelle avec le propriétaire et son adresse
