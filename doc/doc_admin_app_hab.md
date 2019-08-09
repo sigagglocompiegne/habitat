@@ -836,6 +836,67 @@ Source : `an_hab_indigne_sign`
 
  * Fiches d'information active : Fiche de signalement d'habitat indigne
  
+ ## Recherche : `Dossier avec un péril`
+
+Cette recherche permet à l'utilisateur de faire une recherche des dossiers en péril ouvert.
+
+  * Configuration :
+
+Source : `an_hab_indigne_sign`
+
+|Attribut|Afficher|Rechercher|Suggestion|Attribut de géométrie|Tri des résultats|
+|:---|:-:|:-:|:-:|:-:|:-:|
+|affiche_dossier |x|||||
+|affiche_dossier_comp |x|||||
+|Qualification (affiche_qinit) |x|||||
+|Adresse |x|||||
+|Dossier (nm_doc) ||||||
+|Numéro de dossier de l'organisme extérieur ayant fait le signalement (n_doc) ||||||
+|Complément d'adresse (compt_ad) ||||||
+|Signalé le (d_signal) ||||||
+|Par (o_signal) ||||||
+|Qualification (q_init) ||||||
+|Détail de la qualification initiale (q_det) ||||||
+|Date de demande d'une visite (d_visit_d) ||||||
+|Date de la visite (d_visit_e) ||||||
+|Opérateur de la visite (o_visit) ||||||
+|Motif de la non visite (m_nvisit) ||||||
+|Date du rapport de la visite (d_rvisit) ||||||
+|Qualification finale (q_final) ||||||
+|Résumé du rapport de visite (r_rvisit) ||||||
+|Action(s) à entreprendre (action) ||||||
+|Avancement du dossier (précisions) (av_dos) ||||||
+|Date du procés-verbal de mise en demeure (d_pvmed) ||||||
+|Prochain délai (d_pdelais) ||||||
+|Date de la visite de conformité (d_visitconf) ||||||
+|Dossier clos (cloture) ||||||
+|Information donnée au maire (m_avise) ||||||
+|Nombre de logements (nblog) ||||||
+|Le logements ou l'immeuble concerné est-il occupé ? (occupation) ||||||
+|Dossier ANAH (dos_anah) ||||||
+|Observations (observ) ||||||
+|geom (xapps_geo_v_hab_indigne) ||||x||
+
+
+
+(la détection des doublons n'est pas activée ici)
+
+ * Filtres :
+
+
+|Groupe|Jointure|Filtres liés|
+|:---|:-:|:-:|
+|Groupe de filtres par défaut|`ET`|x|
+
+|Nom|Obligatoire|Attribut|Condition|Valeur|Champ d'affichage (1)|Champ de valeurs (1)|Champ de tri (1)|Ajout autorisé (1)|Particularités|
+|:---|:-:|:---|:---|:---|:---|:---|:---|:-:|:---|
+|Dossier non clos|x|cloture|est égale à une valeur par défaut |false||||||
+|Péril|x|qinit|est égale à une valeur par défaut |10||||||
+
+(1) si liste de domaine
+
+ * Fiches d'information active : Fiche de signalement d'habitat indigne
+ 
  ## Recherche : `Rechercher tous les dossiers en cours`
 
 Cette recherche permet à l'utilisateur de faire une recherche sur tous les dossiers de signalements.
