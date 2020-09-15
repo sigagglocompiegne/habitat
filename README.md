@@ -1,4 +1,4 @@
-![picto](/doc/img/Logo_web-GeoCompiegnois.png)
+![picto](/doc/img/gadugi_new_logo_geocompiegnois.png)
 
 # Habitat
 
