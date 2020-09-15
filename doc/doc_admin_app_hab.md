@@ -6,9 +6,9 @@
 
 * Statut
   - [ ] à rédiger
-  - [x] en cours de rédaction
+  - [ ] en cours de rédaction
   - [ ] relecture
-  - [ ] finaliser
+  - [x] finaliser
   - [ ] révision
 
 * Historique des versions
@@ -1757,7 +1757,8 @@ Liste des recherches : Signalement d'habitat indigne, Bâtiments du parc locatif
 |Cadastre|x|100%|
 |Plan de ville||100%|
 |Carte IGN 25000||100%|
-|Photographie aérienne 2013|x|70%|
+|Vue aérienne 2018|x|80%|
+|Vue aérienne 2013|x|75%|
 
 * Fonctionnalités
 
